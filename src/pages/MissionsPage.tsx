@@ -2,6 +2,7 @@ import { useCallback, useMemo, useState } from 'react';
 import { Link } from 'react-router-dom';
 import { buttonClass, EmptyState, ErrorState, LoadingState, PageHeader } from '../components/ui';
 import { useRemoteData } from '../hooks/useRemoteData';
+import { useSession } from '../context/SessionContext';
 import { soulUpService } from '../services/soulUp';
 import type { MissionCategory } from '../types/domain';
 
@@ -18,8 +19,9 @@ export const statusLabels = {
 };
 
 export function MissionsPage() {
+  const { session } = useSession();
   const [category, setCategory] = useState<MissionCategory | 'todas'>('todas');
-  const load = useCallback((signal: AbortSignal) => soulUpService.listMissions(signal), []);
+  const load = useCallback((signal: AbortSignal) => soulUpService.listMissions(signal), [session]);
   const { state, retry } = useRemoteData(load);
   const missions = useMemo(() => state.status === 'success'
     ? state.data.filter((mission) => category === 'todas' || mission.category === category)

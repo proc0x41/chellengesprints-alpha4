@@ -9,6 +9,7 @@ const links = [
   { to: '/integrantes', label: 'Integrantes' },
   { to: '/faq', label: 'FAQ' },
   { to: '/contato', label: 'Contato' },
+  { to: '/conta', label: 'Meu perfil' },
 ];
 
 export function Layout() {

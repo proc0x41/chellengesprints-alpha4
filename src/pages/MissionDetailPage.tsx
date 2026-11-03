@@ -3,6 +3,7 @@ import type { FormEvent } from 'react';
 import { Link, useNavigate, useParams } from 'react-router-dom';
 import { buttonClass, ErrorState, LoadingState, PageHeader } from '../components/ui';
 import { useNotice } from '../context/NoticeContext';
+import { useSession } from '../context/SessionContext';
 import { useRemoteData } from '../hooks/useRemoteData';
 import { ApiError } from '../services/http';
 import { soulUpService } from '../services/soulUp';
@@ -19,7 +20,8 @@ export function MissionDetailPage() {
 function MissionDetail({ id }: { id: string }) {
   const navigate = useNavigate();
   const { notify } = useNotice();
-  const load = useCallback((signal: AbortSignal) => soulUpService.getMission(id, signal), [id]);
+  const { session } = useSession();
+  const load = useCallback((signal: AbortSignal) => soulUpService.getMission(id, signal), [id, session]);
   const { state, retry } = useRemoteData(load);
   const [text, setText] = useState('');
   const [sending, setSending] = useState(false);
@@ -56,7 +58,7 @@ function MissionDetail({ id }: { id: string }) {
       <Link to="/missoes" className="mb-6 inline-flex min-h-11 items-center font-semibold text-brand underline underline-offset-4">Voltar para missões</Link>
       <PageHeader title={mission.title} description={`${categoryLabels[mission.category]} · ${statusLabels[mission.status]} · ${mission.points.toLocaleString('pt-BR')} pontos`} />
       <section className="rounded-2xl border border-slate-200 bg-white p-6 sm:p-8"><h2 className="text-xl font-bold">Sua missão</h2><p className="mt-4 whitespace-pre-wrap break-words leading-8 text-slate-600">{mission.description}</p></section>
-      {mission.status !== 'disponivel'
+      {!session ? <p className="mt-6 rounded-xl bg-brand-light p-5 leading-7 text-brand"><Link to="/conta" className="font-semibold underline underline-offset-4">Crie seu perfil</Link> para registrar a participação nesta missão.</p> : mission.status !== 'disponivel'
         ? <p role="status" className="mt-6 rounded-xl bg-brand-light p-5 leading-7 text-brand">{mission.status === 'concluida' ? 'Esta missão já foi concluída. Consulte a lista para encontrar outra ação.' : 'Sua participação está em análise. Aguarde a validação antes de enviar novamente.'}</p>
         : <form onSubmit={submit} className="mt-8 space-y-5" aria-busy={sending}>
           <h2 className="text-xl font-bold">Registre sua participação</h2>

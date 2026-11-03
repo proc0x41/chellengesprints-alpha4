@@ -1,6 +1,7 @@
 import type { ReactNode } from 'react';
 import { Link } from 'react-router-dom';
 import { IntegrationPendingError } from '../services/soulUp';
+import { ApiError } from '../services/http';
 
 export const buttonClass = 'inline-flex min-h-11 items-center justify-center gap-2 rounded-xl bg-brand px-5 py-3 text-center text-sm font-semibold text-white transition-colors hover:bg-ink disabled:bg-slate-200 disabled:text-slate-600 motion-reduce:transition-none';
 export const secondaryButtonClass = 'inline-flex min-h-11 items-center justify-center rounded-xl border border-slate-300 px-5 py-3 text-center text-sm font-semibold text-ink transition-colors hover:bg-white motion-reduce:transition-none';
@@ -28,12 +29,14 @@ export function LoadingState({ label = 'Carregando conteúdo…' }: { label?: st
 
 export function ErrorState({ error, retry }: { error: Error; retry: () => void }) {
   const pending = error instanceof IntegrationPendingError;
+  const needsSession = error instanceof ApiError && (error.status === 401 || error.status === 403);
   return (
     <section role={pending ? 'status' : 'alert'} className="rounded-2xl border border-slate-200 bg-white p-6 sm:p-8">
       <h2 className="text-xl font-bold">{pending ? 'A conexão ainda não está disponível' : 'Não foi possível carregar'}</h2>
       <p className="mt-3 max-w-2xl leading-7 text-slate-600">{error.message}</p>
       <div className="mt-6 flex flex-wrap gap-3">
         {!pending && <button type="button" onClick={retry} className={buttonClass}>Tentar novamente</button>}
+        {needsSession && <Link to="/conta" className={secondaryButtonClass}>Acessar meu perfil</Link>}
         <Link to="/contato" className={secondaryButtonClass}>Falar com a equipe</Link>
       </div>
     </section>

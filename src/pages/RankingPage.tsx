@@ -1,6 +1,7 @@
 import { useCallback, useState } from 'react';
 import { EmptyState, ErrorState, LoadingState, PageHeader } from '../components/ui';
 import { useRemoteData } from '../hooks/useRemoteData';
+import { useSession } from '../context/SessionContext';
 import { soulUpService } from '../services/soulUp';
 import type { RankingScope } from '../types/domain';
 
@@ -12,8 +13,9 @@ const scopes: { value: RankingScope; label: string }[] = [
 ];
 
 export function RankingPage() {
+  const { session } = useSession();
   const [scope, setScope] = useState<RankingScope>('global');
-  const load = useCallback((signal: AbortSignal) => soulUpService.getRanking(scope, signal), [scope]);
+  const load = useCallback((signal: AbortSignal) => soulUpService.getRanking(scope, signal), [scope, session]);
   const { state, retry } = useRemoteData(load);
   return (
     <div>

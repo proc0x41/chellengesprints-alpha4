@@ -1,6 +1,8 @@
 import { Navigate, Route, Routes } from 'react-router-dom';
 import { Layout } from './components/Layout';
 import { NoticeProvider } from './context/NoticeContext';
+import { SessionProvider } from './context/SessionContext';
+import { AccountPage } from './pages/AccountPage';
 import { AboutPage } from './pages/AboutPage';
 import { ContactPage } from './pages/ContactPage';
 import { FaqPage } from './pages/FaqPage';
@@ -13,7 +15,7 @@ import { TeamPage } from './pages/TeamPage';
 
 export function App() {
   return (
-    <NoticeProvider>
+    <SessionProvider><NoticeProvider>
       <Routes>
         <Route element={<Layout />}>
           <Route index element={<HomePage />} />
@@ -25,9 +27,10 @@ export function App() {
           <Route path="missoes" element={<MissionsPage />} />
           <Route path="missoes/:id" element={<MissionDetailPage />} />
           <Route path="ranking" element={<RankingPage />} />
+          <Route path="conta" element={<AccountPage />} />
           <Route path="*" element={<NotFoundPage />} />
         </Route>
       </Routes>
-    </NoticeProvider>
+    </NoticeProvider></SessionProvider>
   );
 }
