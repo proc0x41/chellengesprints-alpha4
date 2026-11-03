@@ -38,6 +38,19 @@ export interface EvidenceReceipt {
   message: string;
 }
 
+export interface Participant extends Identified {
+  name: string;
+  uf: string;
+  community: string;
+}
+
+export type ParticipantInput = Omit<Participant, 'id'>;
+
+export interface Session {
+  participant: Participant;
+  token: string;
+}
+
 export type RemoteState<T> =
   | { status: 'loading' }
   | { status: 'success'; data: T }
