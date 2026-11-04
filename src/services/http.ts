@@ -33,17 +33,34 @@ export async function requestJson(
       signal: combinedSignal,
     });
     if (!response.ok) {
+      let businessMessage: string | undefined;
+      if ([400, 409, 422, 429].includes(response.status)) {
+        try {
+          const data: unknown = await response.json();
+          if (
+            data &&
+            typeof data === 'object' &&
+            'message' in data &&
+            typeof data.message === 'string' &&
+            data.message.length <= 500
+          )
+            businessMessage = data.message;
+        } catch {
+          /* Respostas não JSON usam a mensagem segura abaixo. */
+        }
+      }
       const message =
         response.status === 404
           ? 'O conteúdo solicitado não foi encontrado.'
           : response.status === 401 || response.status === 403
             ? 'Você não tem acesso a esta operação. Verifique sua sessão.'
             : 'O serviço não conseguiu concluir a operação. Tente novamente.';
-      throw new ApiError(message, response.status);
+      throw new ApiError(businessMessage || message, response.status);
     }
     if (response.status === 204) return null;
     try {
-      return await response.json();
+      const content = await response.text();
+      return content.trim() ? (JSON.parse(content) as unknown) : null;
     } catch {
       throw new ApiError('O serviço retornou uma resposta inválida. Tente novamente.');
     }

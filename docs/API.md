@@ -6,16 +6,19 @@ são validadas em `src/services/decoders.ts` antes de chegar à interface.
 
 ## Contrato compartilhado
 
-| Método | Recurso | Uso no frontend |
-| --- | --- | --- |
-| GET | `/missoes` | Lista de missões; Bearer opcional para estado individual |
-| GET | `/missoes/{id}` | Detalhe com o identificador da rota |
-| POST | `/missoes/{id}/evidencias` | `{ "text": "descrição da participação" }`; exige Bearer |
-| GET | `/ranking?scope=global` | Ranking global |
-| GET | `/ranking?scope=estadual\|comunidade\|amigos` | Rankings pessoais; exigem Bearer |
-| POST | `/participantes` | `{ "name": "apelido", "uf": "SP", "community": "grupo" }` |
-| PUT | `/participantes/me` | Atualiza o próprio perfil; exige Bearer |
-| DELETE | `/participantes/me` | Exclui o próprio perfil; exige Bearer |
+| Método | Recurso                                       | Uso no frontend                                           |
+| ------ | --------------------------------------------- | --------------------------------------------------------- |
+| GET    | `/missoes`                                    | Lista de missões; Bearer opcional para estado individual  |
+| GET    | `/missoes/{id}`                               | Detalhe com o identificador da rota                       |
+| POST   | `/missoes/{id}/evidencias`                    | `{ "text": "descrição da participação" }`; exige Bearer   |
+| GET    | `/ranking?scope=global`                       | Ranking global                                            |
+| GET    | `/ranking?scope=estadual\|comunidade\|amigos` | Rankings pessoais; exigem Bearer                          |
+| POST   | `/participantes`                              | `{ "name": "apelido", "uf": "SP", "community": "grupo" }` |
+| PUT    | `/participantes/me`                           | Atualiza o próprio perfil; exige Bearer                   |
+| DELETE | `/participantes/me`                           | Exclui o próprio perfil; exige Bearer                     |
+| GET    | `/amigos`                                     | Lista de perfis acompanhados                              |
+| POST   | `/amigos/{id}`                                | Acompanha um perfil pelo código compartilhado             |
+| DELETE | `/amigos/{id}`                                | Remove acompanhamento                                     |
 
 `Mission`: `{ id, title, description, category, points, requiresEvidence, status }`.
 Categorias: `ambiental`, `social`, `governanca`. Estados: `disponivel`,

@@ -28,6 +28,23 @@ describe('requestJson', () => {
     await expect(requestJson('/api/missoes/1', { method: 'DELETE' })).resolves.toBeNull();
   });
 
+  it('aceita criação de acompanhamento sem corpo JSON', async () => {
+    vi.stubGlobal('fetch', vi.fn().mockResolvedValue(new Response(null, { status: 201 })));
+    await expect(requestJson('/api/amigos/1', { method: 'POST' })).resolves.toBeNull();
+  });
+
+  it('mostra mensagem controlada de validação do backend', async () => {
+    vi.stubGlobal(
+      'fetch',
+      vi
+        .fn()
+        .mockResolvedValue(Response.json({ message: 'Informe uma UF válida.' }, { status: 400 })),
+    );
+    await expect(requestJson('/api/participantes', { method: 'POST', body: {} })).rejects.toThrow(
+      'Informe uma UF válida.',
+    );
+  });
+
   it.each([401, 403, 404, 500])(
     'preserva status HTTP %s e não expõe detalhes internos',
     async (status) => {
