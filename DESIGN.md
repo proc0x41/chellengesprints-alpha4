@@ -126,7 +126,7 @@ components:
 
 **Creative North Star: "Gamificação sustentável da Soul Up, interface operacional com identidade do protótipo Alpha4"**
 
-Este documento registra o sistema que o frontend implementa. O norte é uma descrição factual da identidade existente, sem nova metáfora ou marca. A referência visual é a página 13 do PDF da Sprint 3, preservada em [pagina13-X41.png](../tmp/pdfs/pagina13-X41.png); a aplicação também apresenta o recorte original em `public/images/missoes-sprint3.png`.
+Este documento registra o sistema que o frontend implementa. O norte é uma descrição factual da identidade existente, sem nova metáfora ou marca. A referência visual é a página 13 do PDF da Sprint 3, preservada em [pagina13-X41.png](../tmp/pdfs/pagina13-X41.png). O recorte original fica em `public/images/missoes-sprint3.png`; a Home utiliza `public/images/missoes-prototipo-revisado.png`, com títulos em duas linhas e pontuações separadas para corrigir a sobreposição da imagem original.
 
 A interface usa fundo claro, texto azul-marinho, verde para ações e superfícies brancas delimitadas. A densidade permite ler instruções e completar tarefas em telas pequenas. Estados de carregamento, vazio, falha e conclusão acompanham a operação real. A home apresenta a proposta; as jornadas de participação privilegiam instruções e controles explícitos. Essas diferenças de composição não criam paletas ou sistemas separados.
 
@@ -229,7 +229,7 @@ Ranking é tabela semântica dentro de recipiente branco com cantos de 16px; cab
 - **Do** usar os tokens de identidade de `src/styles.css` e utilitários Tailwind nos novos componentes.
 - **Do** manter texto de estado, foco visível e rótulos associados aos campos.
 - **Do** preservar o espaço dos controles e a quebra de texto variável em telas estreitas.
-- **Do** identificar a imagem original como protótipo de referência, sem apresentá-la como conta real.
+- **Do** identificar a imagem revisada como protótipo de referência, sem apresentá-la como conta real.
 - **Do** manter a distinção entre informação de participação e confirmação retornada pelo serviço.
 
 ### Don't:

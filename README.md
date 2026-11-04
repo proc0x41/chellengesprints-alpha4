@@ -173,9 +173,13 @@ Captura real desta implementação, produzida com perfil de demonstração e
 backend local. Outras resoluções e jornadas estão em `docs/screenshots/`.
 As capturas não comprovam publicação em nuvem.
 
-O arquivo `public/images/missoes-sprint3.png`, usado na página inicial, foi
-extraído da página 13 do PDF da própria equipe; trata-se de um protótipo
-da Sprint 3, não de uma captura do sistema em produção. A interface utiliza
+O arquivo original `public/images/missoes-sprint3.png` foi extraído da página
+13 do PDF da equipe e preservado como referência. A página inicial utiliza
+`public/images/missoes-prototipo-revisado.png`, editado com ImageGen para
+separar os títulos das pontuações e corrigir a sobreposição do original.
+O prompt da edição acompanha a imagem no arquivo `.prompt.txt`.
+Os valores do protótipo são ilustrativos, não dados de uma conta real.
+A interface utiliza
 controles textuais e nativos do navegador, sem pacote de UI ou ícones externos.
 
 ## Contato
