@@ -23,9 +23,9 @@ export function HomePage() {
               Acompanhar ranking
             </Link>
           </div>
-          <p className="mt-6 max-w-xl rounded-xl bg-amber-100 p-4 text-sm leading-6 text-amber-950">
-            As consultas e o envio de evidências aguardam conexão com o serviço da Soul Up. Nenhuma
-            pontuação de usuário é simulada nesta versão.
+          <p className="mt-6 max-w-xl rounded-xl bg-brand-light p-4 text-sm leading-6 text-brand">
+            Crie seu perfil para registrar a participação nas missões. Os pontos são creditados após
+            a validação da ação.
           </p>
         </div>
         <figure className="m-0 rounded-2xl bg-ink p-6 sm:p-8">
