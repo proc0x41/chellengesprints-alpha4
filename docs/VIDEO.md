@@ -1,10 +1,11 @@
 # Demonstração da Sprint 4
 
-Foi produzida uma gravação local de **1 minuto e 35,2 segundos**, com legendas
+Foi produzida uma gravação local de **aproximadamente 1 minuto e 36 segundos**, com legendas
 explicativas e sem narração, em 1280 × 900 px. Ela apresenta tecnologias,
 navegação, cadastro, listagem, detalhe, evidência, aprovação real no serviço,
 ranking, atualização e exclusão de perfil. O perfil é de demonstração e seus
-registros são removidos ao final.
+registros são removidos ao final. A gravação foi refeita após a correção dos
+e-mails institucionais para o formato `rm{rm}@fiap.com.br`.
 
 O arquivo foi salvo fora do ZIP de fontes, em
 `../entregas/frontend/alpha4-demonstracao-local.webm`. Foram conferidos duração,
