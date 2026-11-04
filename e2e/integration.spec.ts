@@ -7,7 +7,7 @@ const adminFile = process.env.E2E_ADMIN_KEY_FILE;
 test('integração real: perfil, detalhe, evidência, moderação, ranking e exclusão', async ({
   page,
   request,
-}) => {
+}, testInfo) => {
   test.skip(
     !api || !adminFile,
     'Configure E2E_API_URL e E2E_ADMIN_KEY_FILE para o backend de teste.',
@@ -54,7 +54,10 @@ test('integração real: perfil, detalhe, evidência, moderação, ranking e exc
     await page.getByRole('button', { name: 'Acompanhar perfil' }).click();
     await expect(page.getByText('A'.repeat(80), { exact: true })).toBeVisible();
     expect(await page.evaluate(() => document.documentElement.scrollWidth)).toBe(390);
-    await page.screenshot({ path: 'docs/screenshots/amigos-mobile-limite.png', fullPage: true });
+    await page.screenshot({
+      path: testInfo.outputPath('amigos-mobile-limite.png'),
+      fullPage: true,
+    });
     await page.getByRole('button', { name: `Deixar de acompanhar ${'A'.repeat(80)}` }).click();
     await expect(page.getByText('Sua lista está vazia')).toBeVisible();
 
