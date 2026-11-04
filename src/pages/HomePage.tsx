@@ -30,14 +30,14 @@ export function HomePage() {
         </div>
         <figure className="m-0 rounded-2xl bg-ink p-6 sm:p-8">
           <img
-            src="/images/missoes-sprint3.png"
-            alt="Protótipo da Sprint 3 com missões diárias, sequência de participação e acesso ao ranking."
+            src="/images/missoes-prototipo-revisado.png"
+            alt="Protótipo visual de missões com títulos em duas linhas e pontuações em uma coluna separada."
             className="mx-auto h-80 max-w-full object-contain sm:h-96"
-            width={919}
-            height={1839}
+            width={887}
+            height={1774}
           />
           <figcaption className="mt-5 text-center text-sm leading-6 text-slate-200">
-            Missões de Hoje · protótipo original da Alpha4, Sprint 3.
+            Missões de Hoje · protótipo visual revisado da Alpha4.
             <br />
             Imagem de referência, sem dados de uma conta real.
           </figcaption>
