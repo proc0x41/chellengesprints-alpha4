@@ -19,7 +19,7 @@ os ajustes de documentação, mesclar em `main` e retornar os ajustes para
 `develop`. Correções urgentes partem de `hotfix/*` sobre `main`.
 
 As identidades são configuradas exclusivamente com `git config --local`, com
-nome completo e e-mail `{rm}@fiap.com.br`, em rodízio entre os cinco integrantes.
+nome completo e e-mail `rm{rm}@fiap.com.br`, em rodízio entre os cinco integrantes.
 As mensagens seguem Conventional Commits em português e cada commit registra
 uma alteração concreta. O mínimo é cinco commits relevantes por integrante.
 
