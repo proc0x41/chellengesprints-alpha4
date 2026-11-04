@@ -90,14 +90,14 @@ function MissionDetail({ id }: { id: string }) {
         </p>
       </section>
       {!session ? (
-        <p className="mt-6 rounded-xl bg-brand-light p-5 leading-7 text-brand">
+        <p className="mt-6 rounded-xl bg-brand-light p-5 leading-7 text-brand-strong">
           <Link to="/conta" className="font-semibold underline underline-offset-4">
             Crie seu perfil
           </Link>{' '}
           para registrar a participação nesta missão.
         </p>
       ) : mission.status !== 'disponivel' ? (
-        <p role="status" className="mt-6 rounded-xl bg-brand-light p-5 leading-7 text-brand">
+        <p role="status" className="mt-6 rounded-xl bg-brand-light p-5 leading-7 text-brand-strong">
           {mission.status === 'concluida'
             ? 'Esta missão já foi concluída. Consulte a lista para encontrar outra ação.'
             : 'Sua participação está em análise. Aguarde a validação antes de enviar novamente.'}

@@ -4,6 +4,7 @@ description: "Gamificação sustentável da Soul Up com identidade do protótipo
 colors:
   ink: "#111c3d"
   brand: "#087f68"
+  brand-strong: "#066653"
   brand-light: "#e5f6ef"
   paper: "#f4f6fb"
   white: "#fff"
@@ -97,7 +98,7 @@ components:
     padding: "8px 12px"
   nav-item-active:
     backgroundColor: "{colors.brand-light}"
-    textColor: "{colors.brand}"
+    textColor: "{colors.brand-strong}"
   card:
     backgroundColor: "{colors.white}"
     textColor: "{colors.ink}"
@@ -105,7 +106,7 @@ components:
     padding: "24px"
   information:
     backgroundColor: "{colors.brand-light}"
-    textColor: "{colors.brand}"
+    textColor: "{colors.brand-strong}"
     rounded: "{rounded.xl}"
     padding: "20px"
   notice:
@@ -139,10 +140,11 @@ Fonte normativa de implementação: `src/styles.css`, componentes React com util
 
 ## Colors
 
-A paleta combina um verde de ação com azul-marinho e neutros frios. Os quatro tokens personalizados preservam seus valores hexadecimais; os neutros e estados do Tailwind preservam OKLCH. As rampas do sidecar servem à prévia do painel: famílias Tailwind usam sua escala existente; cores personalizadas usam amostras sintetizadas em OKLCH. Essas amostras não ampliam a paleta normativa do frontend.
+A paleta combina um verde de ação com azul-marinho e neutros frios. Os cinco tokens personalizados preservam seus valores hexadecimais; os neutros e estados do Tailwind preservam OKLCH. As rampas do sidecar servem à prévia do painel: famílias Tailwind usam sua escala existente; cores personalizadas usam amostras sintetizadas em OKLCH. Essas amostras não ampliam a paleta normativa do frontend.
 
 ### Primary
 - **Verde Soul Up** (`brand`): botões principais, links de ação, foco e identificação textual de categoria/estado.
+- **Verde de leitura sobre apoio** (`brand-strong`): texto sobre `brand-light`, incluindo navegação ativa, informação de participação e números das etapas. Mantém contraste de texto normal sem alterar o fundo dos botões primários.
 - **Verde claro de apoio** (`brand-light`): item de navegação ativo e informações sobre participação.
 
 ### Neutral
@@ -211,11 +213,11 @@ Campos brancos, borda `slate-300`, cantos de 12px e padding de 12px por 16px no 
 
 ### Navigation
 
-O cabeçalho branco delimita a marca e oito destinos. Itens em 14px semibold têm altura mínima de 44px e cantos de 8px. Ativo usa `brand-light` com texto `brand`; hover inativo usa `paper` com texto `ink`. Abaixo de `lg`, um botão abre a lista vertical. Há link de salto e o conteúdo recebe foco quando a rota muda. Links de rodapé são sublinhados.
+O cabeçalho branco delimita a marca e oito destinos. Itens em 14px semibold têm altura mínima de 44px e cantos de 8px. Ativo usa `brand-light` com texto `brand-strong`; hover inativo usa `paper` com texto `ink`. Abaixo de `lg`, um botão abre a lista vertical. Há link de salto e o conteúdo recebe foco quando a rota muda. Links de rodapé são sublinhados.
 
 ### Feedback de operação
 
-Carregamento tem texto e três blocos claros com pulso de 2s, somente quando movimento é permitido. Vazio usa borda tracejada e texto centralizado. Falha usa recipiente branco com explicação e ações de recuperação aplicáveis. Informações de participação usam verde claro sem implicar aprovação. O aviso de sucesso é fixo, azul-marinho, com botão textual para fechar e anúncio de status.
+Carregamento tem texto e três blocos claros com pulso de 2s, somente quando movimento é permitido. Vazio usa borda tracejada e texto centralizado. Falha usa recipiente branco com explicação e ações de recuperação aplicáveis. Informações de participação usam fundo `brand-light` e texto `brand-strong` sem implicar aprovação. O aviso de sucesso é fixo, azul-marinho, com botão textual para fechar e anúncio de status.
 
 ### Ranking e FAQ
 

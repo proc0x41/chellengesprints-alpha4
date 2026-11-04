@@ -75,7 +75,7 @@ export function Layout() {
                 to={to}
                 end={to === '/'}
                 className={({ isActive }) =>
-                  `flex min-h-11 items-center rounded-lg px-3 py-2 text-sm font-semibold ${isActive ? 'bg-brand-light text-brand' : 'text-slate-600 hover:bg-paper hover:text-ink'}`
+                  `flex min-h-11 items-center rounded-lg px-3 py-2 text-sm font-semibold ${isActive ? 'bg-brand-light text-brand-strong' : 'text-slate-600 hover:bg-paper hover:text-ink'}`
                 }
               >
                 {label}

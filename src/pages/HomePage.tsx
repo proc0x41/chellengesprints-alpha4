@@ -23,7 +23,7 @@ export function HomePage() {
               Acompanhar ranking
             </Link>
           </div>
-          <p className="mt-6 max-w-xl rounded-xl bg-brand-light p-4 text-sm leading-6 text-brand">
+          <p className="mt-6 max-w-xl rounded-xl bg-brand-light p-4 text-sm leading-6 text-brand-strong">
             Crie seu perfil para registrar a participação nas missões. Os pontos são creditados após
             a validação da ação.
           </p>
@@ -59,7 +59,7 @@ export function HomePage() {
         </div>
         <ol className="space-y-7">
           <li className="grid grid-cols-[2.75rem_1fr] gap-4">
-            <span className="flex size-11 items-center justify-center rounded-xl bg-brand-light font-bold text-brand">
+            <span className="flex size-11 items-center justify-center rounded-xl bg-brand-light font-bold text-brand-strong">
               1
             </span>
             <div>
@@ -70,7 +70,7 @@ export function HomePage() {
             </div>
           </li>
           <li className="grid grid-cols-[2.75rem_1fr] gap-4">
-            <span className="flex size-11 items-center justify-center rounded-xl bg-brand-light font-bold text-brand">
+            <span className="flex size-11 items-center justify-center rounded-xl bg-brand-light font-bold text-brand-strong">
               2
             </span>
             <div>
@@ -81,7 +81,7 @@ export function HomePage() {
             </div>
           </li>
           <li className="grid grid-cols-[2.75rem_1fr] gap-4">
-            <span className="flex size-11 items-center justify-center rounded-xl bg-brand-light font-bold text-brand">
+            <span className="flex size-11 items-center justify-center rounded-xl bg-brand-light font-bold text-brand-strong">
               3
             </span>
             <div>

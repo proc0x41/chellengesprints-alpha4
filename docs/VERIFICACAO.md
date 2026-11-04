@@ -29,6 +29,11 @@ após correção, a reprodução independente confirmou documento e viewport com
 390 px, e o achado foi classificado como resolvido. O aceite foi dado apenas
 ao **escopo local**.
 
+A verificação numérica de contraste identificou 4,418:1 no verde sobre fundo
+verde claro. Texto nessas superfícies passou a usar `brand-strong`, mantendo
+o verde dos botões. O revisor confirmou no DOM a nova combinação em 6,185:1,
+e branco sobre botão continua em 4,946:1, ambos adequados para texto normal.
+
 ## Pendências para a entrega completa
 
 - Publicar frontend na Vercel e Java em serviço com banco persistente.

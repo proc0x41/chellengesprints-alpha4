@@ -1,6 +1,6 @@
 {
   "schemaVersion": 2,
-  "generatedAt": "2026-11-04T00:17:20.695Z",
+  "generatedAt": "2026-11-04T00:21:52.332Z",
   "title": "Design System: Alpha4 para a Soul Up",
   "extensions": {
     "colorMeta": {
@@ -228,6 +228,21 @@
           "oklch(88.5% 0.062 18.334)",
           "oklch(97.1% 0.013 17.38)"
         ]
+      },
+      "brand-strong": {
+        "role": "primary",
+        "displayName": "Verde de leitura sobre apoio",
+        "canonical": "#066653",
+        "tonalRamp": [
+          "oklch(15% 0.0852 173.74)",
+          "oklch(26.43% 0.0852 173.74)",
+          "oklch(37.86% 0.0852 173.74)",
+          "oklch(49.29% 0.0852 173.74)",
+          "oklch(60.71% 0.0852 173.74)",
+          "oklch(72.14% 0.0852 173.74)",
+          "oklch(83.57% 0.0852 173.74)",
+          "oklch(95% 0.0852 173.74)"
+        ]
       }
     },
     "typographyMeta": {
@@ -325,7 +340,7 @@
       "refersTo": "nav-item",
       "description": "Itens com estado ativo verde claro e hover frio; composição aberta para demonstração.",
       "html": "<nav class=\"ds-nav\" aria-label=\"Navegação principal\"><a class=\"ds-nav-link ds-focus ds-nav-active\" href=\"#\" aria-current=\"page\">Início</a><a class=\"ds-nav-link ds-focus\" href=\"#\">Missões</a><a class=\"ds-nav-link ds-focus\" href=\"#\">Ranking</a></nav>",
-      "css": ".ds-nav{display:flex;flex-wrap:wrap;gap:4px;font-family:var(--font-sans,'Segoe UI',system-ui,sans-serif);}.ds-nav-link{display:flex;min-height:44px;align-items:center;padding:8px 12px;border-radius:8px;color:var(--color-slate-600,oklch(44.6% 0.043 257.281));font-size:14px;font-weight:600;line-height:20px;text-decoration:none;}.ds-nav-link:hover{background:var(--color-paper,#f4f6fb);color:var(--color-ink,#111c3d);}.ds-nav-link.ds-nav-active{background:var(--color-brand-light,#e5f6ef);color:var(--color-brand,#087f68);}.ds-focus:focus-visible{outline:2px solid var(--color-brand,#087f68);outline-offset:4px;}"
+      "css": ".ds-nav{display:flex;flex-wrap:wrap;gap:4px;font-family:var(--font-sans,'Segoe UI',system-ui,sans-serif);}.ds-nav-link{display:flex;min-height:44px;align-items:center;padding:8px 12px;border-radius:8px;color:var(--color-slate-600,oklch(44.6% 0.043 257.281));font-size:14px;font-weight:600;line-height:20px;text-decoration:none;}.ds-nav-link:hover{background:var(--color-paper,#f4f6fb);color:var(--color-ink,#111c3d);}.ds-nav-link.ds-nav-active{background:var(--color-brand-light,#e5f6ef);color:var(--color-brand-strong,#066653);}.ds-focus:focus-visible{outline:2px solid var(--color-brand,#087f68);outline-offset:4px;}"
     },
     {
       "name": "Recipiente de conteúdo",
@@ -341,7 +356,7 @@
       "refersTo": "information",
       "description": "Explicação verde clara; não implica confirmação de conclusão.",
       "html": "<p class=\"ds-info\">Os pontos dependem da validação da participação pelo serviço.</p>",
-      "css": ".ds-info{font-family:var(--font-sans,'Segoe UI',system-ui,sans-serif);margin:0;padding:20px;border-radius:12px;background:var(--color-brand-light,#e5f6ef);color:var(--color-brand,#087f68);font-size:16px;line-height:28px;}"
+      "css": ".ds-info{font-family:var(--font-sans,'Segoe UI',system-ui,sans-serif);margin:0;padding:20px;border-radius:12px;background:var(--color-brand-light,#e5f6ef);color:var(--color-brand-strong,#066653);font-size:16px;line-height:28px;}"
     },
     {
       "name": "Aviso de resultado",
