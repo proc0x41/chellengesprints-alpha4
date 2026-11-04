@@ -147,13 +147,13 @@ docs/           contrato e fluxo de versionamento
 Todos os integrantes são da turma **1TDSPW**. Nomes e RMs seguem o documento
 `Alpha4_Sprint3.pdf`, fornecido pela equipe.
 
-| Nome completo                   | RM     | Contato            | Foto          | GitHub        | LinkedIn      |
-| ------------------------------- | ------ | ------------------ | ------------- | ------------- | ------------- |
-| Vinicius de Oliveira            | 561862 | 561862@fiap.com.br | Não fornecida | Não informado | Não informado |
-| Robison Custodio Junior         | 572866 | 572866@fiap.com.br | Não fornecida | Não informado | Não informado |
-| Lucas Fernando Silva            | 564848 | 564848@fiap.com.br | Não fornecida | Não informado | Não informado |
-| Thiago Shimizu Sodré dos Santos | 572867 | 572867@fiap.com.br | Não fornecida | Não informado | Não informado |
-| Arthur Mendes Garcia            | 571703 | 571703@fiap.com.br | Não fornecida | Não informado | Não informado |
+| Nome completo                   | RM     | Contato              | Foto          | GitHub        | LinkedIn      |
+| ------------------------------- | ------ | -------------------- | ------------- | ------------- | ------------- |
+| Vinicius de Oliveira            | 561862 | rm561862@fiap.com.br | Não fornecida | Não informado | Não informado |
+| Robison Custodio Junior         | 572866 | rm572866@fiap.com.br | Não fornecida | Não informado | Não informado |
+| Lucas Fernando Silva            | 564848 | rm564848@fiap.com.br | Não fornecida | Não informado | Não informado |
+| Thiago Shimizu Sodré dos Santos | 572867 | rm572867@fiap.com.br | Não fornecida | Não informado | Não informado |
+| Arthur Mendes Garcia            | 571703 | rm571703@fiap.com.br | Não fornecida | Não informado | Não informado |
 
 Esses campos precisam ser preenchidos com os dados reais antes da entrega.
 O histórico utiliza Conventional Commits em português, com rodízio de

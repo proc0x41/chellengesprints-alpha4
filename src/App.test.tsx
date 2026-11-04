@@ -130,7 +130,7 @@ describe('Navegação e fluxos da Soul Up', () => {
     fireEvent.change(screen.getByLabelText('Assunto'), { target: { value: 'Dúvida & sugestão' } });
     const link = screen.getByRole('link', { name: 'Abrir aplicativo de e-mail' });
     expect(link.getAttribute('href')).toContain(
-      'mailto:572866@fiap.com.br?subject=D%C3%BAvida%20%26%20sugest%C3%A3o',
+      'mailto:rm572866@fiap.com.br?subject=D%C3%BAvida%20%26%20sugest%C3%A3o',
     );
     expect(screen.getByText(/O site não envia nem armazena/)).toBeInTheDocument();
   });
