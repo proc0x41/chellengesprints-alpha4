@@ -6,10 +6,12 @@ do zero em React + Vite + TypeScript, com Tailwind CSS.
 
 ## Estado da entrega
 
-A aplicação compila e possui páginas, rotas, formulários e camada HTTP. A API
-Spring Boot é um projeto independente em desenvolvimento no mesmo workspace.
-O cumprimento completo da entrega depende de validar essa integração, publicar
-frontend e backend e preencher os links e os perfis ainda não fornecidos.
+A aplicação compila e a integração com a API Spring Boot foi verificada
+localmente, incluindo listagem, detalhe, envio e aprovação de evidência,
+ranking, atualização e exclusão de perfil. Revisões independentes conferiram
+o código, os testes e as capturas nas diferentes resoluções.
+O cumprimento completo da entrega ainda depende da publicação do frontend e
+do backend e dos links, fotos e perfis individuais não fornecidos.
 
 ## Tecnologias utilizadas
 
@@ -26,11 +28,12 @@ Axios ou templates prontos.
 
 ## Como usar
 
-| Recurso | Endereço / situação |
-| --- | --- |
-| GitHub do frontend | https://github.com/proc0x41/chellengesprints-alpha4 |
-| Frontend na Vercel | Pendente de publicação e verificação pública |
-| API Java publicada | Pendente de publicação e verificação pública |
+| Recurso                      | Endereço / situação                                             |
+| ---------------------------- | --------------------------------------------------------------- |
+| GitHub do frontend           | https://github.com/proc0x41/chellengesprints-alpha4             |
+| GitHub da API Java           | https://github.com/proc0x41/challengesprints-java               |
+| Frontend na Vercel           | Pendente de publicação e verificação pública                    |
+| API Java publicada           | Pendente de publicação e verificação pública                    |
 | Vídeo da Sprint 4 no YouTube | Pendente de gravação/publicação, duração máxima de três minutos |
 
 O pitch da Sprint 3 citado no PDF não substitui a demonstração funcional da Sprint 4.
@@ -78,18 +81,18 @@ nem armazena mensagens por conta própria.
 
 ### Rotas
 
-| Caminho | Função |
-| --- | --- |
-| `/` e `/home` | Início; `/home` redireciona para `/` |
-| `/sobre` | Problema, proposta e escopo |
-| `/integrantes` | Dados da equipe |
-| `/faq` | Perguntas frequentes |
-| `/contato` | Contato por integrante |
-| `/missoes` | Listagem e filtro de missões |
-| `/missoes/:id` | Detalhe e envio de evidência da missão selecionada |
-| `/ranking` | Rankings por abrangência |
-| `/conta` | Criação, edição e exclusão do perfil |
-| Outros endereços | Página de recuperação com links de retorno |
+| Caminho          | Função                                             |
+| ---------------- | -------------------------------------------------- |
+| `/` e `/home`    | Início; `/home` redireciona para `/`               |
+| `/sobre`         | Problema, proposta e escopo                        |
+| `/integrantes`   | Dados da equipe                                    |
+| `/faq`           | Perguntas frequentes                               |
+| `/contato`       | Contato por integrante                             |
+| `/missoes`       | Listagem e filtro de missões                       |
+| `/missoes/:id`   | Detalhe e envio de evidência da missão selecionada |
+| `/ranking`       | Rankings por abrangência                           |
+| `/conta`         | Criação, edição e exclusão do perfil               |
+| Outros endereços | Página de recuperação com links de retorno         |
 
 ### Verificar e gerar o ZIP
 
@@ -100,6 +103,21 @@ npm run test:e2e
 npm run build
 npm run package
 ```
+
+A suíte padrão verifica a navegação em 360, 480, 768, 992 e 1440 px. O teste
+de integração real é habilitado separadamente e usa um backend de teste:
+
+```powershell
+$env:E2E_API_URL='http://localhost:8080/api'
+$env:E2E_ADMIN_KEY_FILE='C:/caminho/local/chave-de-teste.txt'
+npm run test:e2e
+```
+
+O arquivo deve conter apenas a chave administrativa do **ambiente de teste**.
+Não o versione. Esse teste cria seus próprios perfis e missão, verifica
+acompanhamento de amigos e moderação e remove os registros ao terminar.
+Sem as duas variáveis, o teste real é explicitamente ignorado; uma suíte
+verde nesse modo não comprova a integração com a API.
 
 O empacotamento exige uma árvore Git limpa e gera
 `entregas/alpha4-frontend.zip` com os arquivos versionados, sem `node_modules`,
@@ -129,13 +147,13 @@ docs/           contrato e fluxo de versionamento
 Todos os integrantes são da turma **1TDSPW**. Nomes e RMs seguem o documento
 `Alpha4_Sprint3.pdf`, fornecido pela equipe.
 
-| Nome completo | RM | Contato | Foto | GitHub | LinkedIn |
-| --- | --- | --- | --- | --- | --- |
-| Vinicius de Oliveira | 561862 | 561862@fiap.com.br | Não fornecida | Não informado | Não informado |
-| Robison Custodio Junior | 572866 | 572866@fiap.com.br | Não fornecida | Não informado | Não informado |
-| Lucas Fernando Silva | 564848 | 564848@fiap.com.br | Não fornecida | Não informado | Não informado |
+| Nome completo                   | RM     | Contato            | Foto          | GitHub        | LinkedIn      |
+| ------------------------------- | ------ | ------------------ | ------------- | ------------- | ------------- |
+| Vinicius de Oliveira            | 561862 | 561862@fiap.com.br | Não fornecida | Não informado | Não informado |
+| Robison Custodio Junior         | 572866 | 572866@fiap.com.br | Não fornecida | Não informado | Não informado |
+| Lucas Fernando Silva            | 564848 | 564848@fiap.com.br | Não fornecida | Não informado | Não informado |
 | Thiago Shimizu Sodré dos Santos | 572867 | 572867@fiap.com.br | Não fornecida | Não informado | Não informado |
-| Arthur Mendes Garcia | 571703 | 571703@fiap.com.br | Não fornecida | Não informado | Não informado |
+| Arthur Mendes Garcia            | 571703 | 571703@fiap.com.br | Não fornecida | Não informado | Não informado |
 
 Esses campos precisam ser preenchidos com os dados reais antes da entrega.
 O histórico utiliza Conventional Commits em português, com rodízio de
@@ -149,9 +167,14 @@ da apresentação. Metadados de autoria configurados no Git não substituem essa
 
 ## Imagens e ícones relacionados ao projeto
 
-![Protótipo de missões da Alpha4, extraído da Sprint 3](public/images/missoes-sprint3.png)
+![Página de missões integrada à API Java local](docs/screenshots/missoes-desktop.png)
 
-Imagem extraída da página 13 do PDF da própria equipe; trata-se de um protótipo
+Captura real desta implementação, produzida com perfil de demonstração e
+backend local. Outras resoluções e jornadas estão em `docs/screenshots/`.
+As capturas não comprovam publicação em nuvem.
+
+O arquivo `public/images/missoes-sprint3.png`, usado na página inicial, foi
+extraído da página 13 do PDF da própria equipe; trata-se de um protótipo
 da Sprint 3, não de uma captura do sistema em produção. A interface utiliza
 controles textuais e nativos do navegador, sem pacote de UI ou ícones externos.
 
