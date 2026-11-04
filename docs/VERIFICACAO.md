@@ -34,6 +34,12 @@ verde claro. Texto nessas superfícies passou a usar `brand-strong`, mantendo
 o verde dos botões. O revisor confirmou no DOM a nova combinação em 6,185:1,
 e branco sobre botão continua em 4,946:1, ambos adequados para texto normal.
 
+O usuário apontou sobreposição entre títulos e pontuações no PNG original
+do protótipo. A Home passou a usar uma imagem revisada, com títulos em duas
+linhas e coluna separada para a pontuação. Build e renderização em seis
+larguras passaram; a revisão independente confirmou a correção no arquivo
+e na página em mobile e desktop. O original foi preservado como referência.
+
 ## Pendências para a entrega completa
 
 - Publicar frontend na Vercel e Java em serviço com banco persistente.
