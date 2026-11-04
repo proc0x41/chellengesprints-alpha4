@@ -5,6 +5,7 @@ import type { Session } from '../types/domain';
 
 interface SessionContextValue {
   session: Session | null;
+  storageAvailable: boolean;
   setSession: (session: Session | null) => void;
 }
 
@@ -12,12 +13,15 @@ const SessionContext = createContext<SessionContextValue | null>(null);
 
 export function SessionProvider({ children }: { children: ReactNode }) {
   const [session, updateSession] = useState(readSession);
+  const [storageAvailable, setStorageAvailable] = useState(true);
   function setSession(value: Session | null) {
-    saveSession(value);
+    setStorageAvailable(saveSession(value));
     updateSession(value);
   }
   return (
-    <SessionContext.Provider value={{ session, setSession }}>{children}</SessionContext.Provider>
+    <SessionContext.Provider value={{ session, setSession, storageAvailable }}>
+      {children}
+    </SessionContext.Provider>
   );
 }
 

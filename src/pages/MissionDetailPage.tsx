@@ -5,6 +5,7 @@ import { buttonClass, ErrorState, LoadingState, PageHeader } from '../components
 import { useNotice } from '../context/NoticeContext';
 import { useSession } from '../context/SessionContext';
 import { useRemoteData } from '../hooks/useRemoteData';
+import { usePageTitle } from '../hooks/usePageTitle';
 import { ApiError } from '../services/http';
 import { soulUpService } from '../services/soulUp';
 import { categoryLabels, statusLabels } from './MissionsPage';
@@ -29,6 +30,7 @@ function MissionDetail({ id }: { id: string }) {
     [id, session],
   );
   const { state, retry } = useRemoteData(load);
+  usePageTitle(state.status === 'success' ? state.data.title : 'Detalhes da missão');
   const [text, setText] = useState('');
   const [sending, setSending] = useState(false);
   const [error, setError] = useState('');
