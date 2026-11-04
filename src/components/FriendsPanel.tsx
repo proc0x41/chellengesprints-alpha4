@@ -93,7 +93,7 @@ export function FriendsPanel() {
                 key={friend.id}
                 className="flex flex-wrap items-center justify-between gap-3 rounded-xl border border-slate-200 bg-white p-5"
               >
-                <p className="break-words font-semibold">{friend.name}</p>
+                <p className="min-w-0 max-w-full break-words font-semibold">{friend.name}</p>
                 <button
                   type="button"
                   className={secondaryButtonClass}

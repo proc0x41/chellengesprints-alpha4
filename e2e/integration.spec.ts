@@ -27,6 +27,7 @@ test('integração real: perfil, detalhe, evidência, moderação, ranking e exc
   expect(created.status()).toBe(201);
   const mission = (await created.json()) as { id: string };
   let participantToken: string | undefined;
+  let friendToken: string | undefined;
 
   try {
     await page.goto('/conta');
@@ -41,6 +42,21 @@ test('integração real: perfil, detalhe, evidência, moderação, ranking e exc
     );
     participantToken = session.token;
     const headers = { Authorization: `Bearer ${participantToken}` };
+
+    const friendResponse = await request.post(`${api}/participantes`, {
+      data: { name: 'A'.repeat(80), uf: 'SP', community: '' },
+    });
+    expect(friendResponse.status()).toBe(201);
+    const friend = (await friendResponse.json()) as { participant: { id: string }; token: string };
+    friendToken = friend.token;
+    await page.setViewportSize({ width: 390, height: 844 });
+    await page.getByLabel('Código do perfil do amigo').fill(friend.participant.id);
+    await page.getByRole('button', { name: 'Acompanhar perfil' }).click();
+    await expect(page.getByText('A'.repeat(80), { exact: true })).toBeVisible();
+    expect(await page.evaluate(() => document.documentElement.scrollWidth)).toBe(390);
+    await page.screenshot({ path: 'docs/screenshots/amigos-mobile-limite.png', fullPage: true });
+    await page.getByRole('button', { name: `Deixar de acompanhar ${'A'.repeat(80)}` }).click();
+    await expect(page.getByText('Sua lista está vazia')).toBeVisible();
 
     await page.goto(`/missoes/${mission.id}`);
     await expect(page.getByRole('heading', { level: 1 })).toHaveText(
@@ -90,6 +106,10 @@ test('integração real: perfil, detalhe, evidência, moderação, ranking e exc
     await expect(page.getByRole('heading', { name: 'Comece a participar' })).toBeVisible();
     participantToken = undefined;
   } finally {
+    if (friendToken)
+      await request.delete(`${api}/participantes/me`, {
+        headers: { Authorization: `Bearer ${friendToken}` },
+      });
     if (participantToken)
       await request.delete(`${api}/participantes/me`, {
         headers: { Authorization: `Bearer ${participantToken}` },
