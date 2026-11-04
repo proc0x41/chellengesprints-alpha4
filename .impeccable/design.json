@@ -1,0 +1,404 @@
+{
+  "schemaVersion": 2,
+  "generatedAt": "2026-11-04T00:17:20.695Z",
+  "title": "Design System: Alpha4 para a Soul Up",
+  "extensions": {
+    "colorMeta": {
+      "ink": {
+        "role": "neutral",
+        "displayName": "Azul-marinho Alpha4",
+        "canonical": "#111c3d",
+        "tonalRamp": [
+          "oklch(15% 0.0650 267.44)",
+          "oklch(26.43% 0.0650 267.44)",
+          "oklch(37.86% 0.0650 267.44)",
+          "oklch(49.29% 0.0650 267.44)",
+          "oklch(60.71% 0.0650 267.44)",
+          "oklch(72.14% 0.0650 267.44)",
+          "oklch(83.57% 0.0650 267.44)",
+          "oklch(95% 0.0650 267.44)"
+        ]
+      },
+      "brand": {
+        "role": "primary",
+        "displayName": "Verde Soul Up",
+        "canonical": "#087f68",
+        "tonalRamp": [
+          "oklch(15% 0.0998 173.86)",
+          "oklch(26.43% 0.0998 173.86)",
+          "oklch(37.86% 0.0998 173.86)",
+          "oklch(49.29% 0.0998 173.86)",
+          "oklch(60.71% 0.0998 173.86)",
+          "oklch(72.14% 0.0998 173.86)",
+          "oklch(83.57% 0.0998 173.86)",
+          "oklch(95% 0.0998 173.86)"
+        ]
+      },
+      "brand-light": {
+        "role": "primary",
+        "displayName": "Verde claro de apoio",
+        "canonical": "#e5f6ef",
+        "tonalRamp": [
+          "oklch(15% 0.0201 169.34)",
+          "oklch(26.43% 0.0201 169.34)",
+          "oklch(37.86% 0.0201 169.34)",
+          "oklch(49.29% 0.0201 169.34)",
+          "oklch(60.71% 0.0201 169.34)",
+          "oklch(72.14% 0.0201 169.34)",
+          "oklch(83.57% 0.0201 169.34)",
+          "oklch(95% 0.0201 169.34)"
+        ]
+      },
+      "paper": {
+        "role": "neutral",
+        "displayName": "Papel frio",
+        "canonical": "#f4f6fb",
+        "tonalRamp": [
+          "oklch(15% 0.0070 268.55)",
+          "oklch(26.43% 0.0070 268.55)",
+          "oklch(37.86% 0.0070 268.55)",
+          "oklch(49.29% 0.0070 268.55)",
+          "oklch(60.71% 0.0070 268.55)",
+          "oklch(72.14% 0.0070 268.55)",
+          "oklch(83.57% 0.0070 268.55)",
+          "oklch(95% 0.0070 268.55)"
+        ]
+      },
+      "white": {
+        "role": "neutral",
+        "displayName": "Branco de superfície",
+        "canonical": "#fff",
+        "tonalRamp": [
+          "oklch(15% 0 0)",
+          "oklch(26.43% 0 0)",
+          "oklch(37.86% 0 0)",
+          "oklch(49.29% 0 0)",
+          "oklch(60.71% 0 0)",
+          "oklch(72.14% 0 0)",
+          "oklch(83.57% 0 0)",
+          "oklch(95% 0 0)"
+        ]
+      },
+      "slate-100": {
+        "role": "neutral",
+        "displayName": "Cinza frio suave",
+        "canonical": "oklch(96.8% 0.007 247.896)",
+        "tonalRamp": [
+          "oklch(12.9% 0.042 264.695)",
+          "oklch(20.8% 0.042 265.755)",
+          "oklch(27.9% 0.041 260.031)",
+          "oklch(37.2% 0.044 257.287)",
+          "oklch(44.6% 0.043 257.281)",
+          "oklch(70.4% 0.04 256.788)",
+          "oklch(86.9% 0.022 252.894)",
+          "oklch(96.8% 0.007 247.896)"
+        ]
+      },
+      "slate-200": {
+        "role": "neutral",
+        "displayName": "Cinza frio de borda",
+        "canonical": "oklch(92.9% 0.013 255.508)",
+        "tonalRamp": [
+          "oklch(12.9% 0.042 264.695)",
+          "oklch(20.8% 0.042 265.755)",
+          "oklch(27.9% 0.041 260.031)",
+          "oklch(37.2% 0.044 257.287)",
+          "oklch(44.6% 0.043 257.281)",
+          "oklch(70.4% 0.04 256.788)",
+          "oklch(86.9% 0.022 252.894)",
+          "oklch(96.8% 0.007 247.896)"
+        ]
+      },
+      "slate-300": {
+        "role": "neutral",
+        "displayName": "Cinza frio de controle",
+        "canonical": "oklch(86.9% 0.022 252.894)",
+        "tonalRamp": [
+          "oklch(12.9% 0.042 264.695)",
+          "oklch(20.8% 0.042 265.755)",
+          "oklch(27.9% 0.041 260.031)",
+          "oklch(37.2% 0.044 257.287)",
+          "oklch(44.6% 0.043 257.281)",
+          "oklch(70.4% 0.04 256.788)",
+          "oklch(86.9% 0.022 252.894)",
+          "oklch(96.8% 0.007 247.896)"
+        ]
+      },
+      "slate-600": {
+        "role": "neutral",
+        "displayName": "Cinza frio de leitura",
+        "canonical": "oklch(44.6% 0.043 257.281)",
+        "tonalRamp": [
+          "oklch(12.9% 0.042 264.695)",
+          "oklch(20.8% 0.042 265.755)",
+          "oklch(27.9% 0.041 260.031)",
+          "oklch(37.2% 0.044 257.287)",
+          "oklch(44.6% 0.043 257.281)",
+          "oklch(70.4% 0.04 256.788)",
+          "oklch(86.9% 0.022 252.894)",
+          "oklch(96.8% 0.007 247.896)"
+        ]
+      },
+      "amber-100": {
+        "role": "semantic",
+        "displayName": "Fundo de atenção",
+        "canonical": "oklch(96.2% 0.059 95.617)",
+        "tonalRamp": [
+          "oklch(27.9% 0.077 45.635)",
+          "oklch(41.4% 0.112 45.904)",
+          "oklch(47.3% 0.137 46.201)",
+          "oklch(55.5% 0.163 48.998)",
+          "oklch(66.6% 0.179 58.318)",
+          "oklch(82.8% 0.189 84.429)",
+          "oklch(92.4% 0.12 95.746)",
+          "oklch(96.2% 0.059 95.617)"
+        ]
+      },
+      "amber-950": {
+        "role": "semantic",
+        "displayName": "Texto de atenção",
+        "canonical": "oklch(27.9% 0.077 45.635)",
+        "tonalRamp": [
+          "oklch(27.9% 0.077 45.635)",
+          "oklch(41.4% 0.112 45.904)",
+          "oklch(47.3% 0.137 46.201)",
+          "oklch(55.5% 0.163 48.998)",
+          "oklch(66.6% 0.179 58.318)",
+          "oklch(82.8% 0.189 84.429)",
+          "oklch(92.4% 0.12 95.746)",
+          "oklch(96.2% 0.059 95.617)"
+        ]
+      },
+      "red-50": {
+        "role": "semantic",
+        "displayName": "Fundo destrutivo",
+        "canonical": "oklch(97.1% 0.013 17.38)",
+        "tonalRamp": [
+          "oklch(25.8% 0.092 26.042)",
+          "oklch(39.6% 0.141 25.723)",
+          "oklch(44.4% 0.177 26.899)",
+          "oklch(50.5% 0.213 27.518)",
+          "oklch(57.7% 0.245 27.325)",
+          "oklch(70.4% 0.191 22.216)",
+          "oklch(88.5% 0.062 18.334)",
+          "oklch(97.1% 0.013 17.38)"
+        ]
+      },
+      "red-200": {
+        "role": "semantic",
+        "displayName": "Borda destrutiva",
+        "canonical": "oklch(88.5% 0.062 18.334)",
+        "tonalRamp": [
+          "oklch(25.8% 0.092 26.042)",
+          "oklch(39.6% 0.141 25.723)",
+          "oklch(44.4% 0.177 26.899)",
+          "oklch(50.5% 0.213 27.518)",
+          "oklch(57.7% 0.245 27.325)",
+          "oklch(70.4% 0.191 22.216)",
+          "oklch(88.5% 0.062 18.334)",
+          "oklch(97.1% 0.013 17.38)"
+        ]
+      },
+      "red-800": {
+        "role": "semantic",
+        "displayName": "Erro e ação destrutiva",
+        "canonical": "oklch(44.4% 0.177 26.899)",
+        "tonalRamp": [
+          "oklch(25.8% 0.092 26.042)",
+          "oklch(39.6% 0.141 25.723)",
+          "oklch(44.4% 0.177 26.899)",
+          "oklch(50.5% 0.213 27.518)",
+          "oklch(57.7% 0.245 27.325)",
+          "oklch(70.4% 0.191 22.216)",
+          "oklch(88.5% 0.062 18.334)",
+          "oklch(97.1% 0.013 17.38)"
+        ]
+      },
+      "red-950": {
+        "role": "semantic",
+        "displayName": "Texto e hover destrutivo",
+        "canonical": "oklch(25.8% 0.092 26.042)",
+        "tonalRamp": [
+          "oklch(25.8% 0.092 26.042)",
+          "oklch(39.6% 0.141 25.723)",
+          "oklch(44.4% 0.177 26.899)",
+          "oklch(50.5% 0.213 27.518)",
+          "oklch(57.7% 0.245 27.325)",
+          "oklch(70.4% 0.191 22.216)",
+          "oklch(88.5% 0.062 18.334)",
+          "oklch(97.1% 0.013 17.38)"
+        ]
+      }
+    },
+    "typographyMeta": {
+      "headline": {
+        "displayName": "Título compacto",
+        "purpose": "Título recorrente de página abaixo de sm."
+      },
+      "headline-wide": {
+        "displayName": "Título amplo",
+        "purpose": "Título recorrente de página a partir de sm."
+      },
+      "title": {
+        "displayName": "Título de recipiente",
+        "purpose": "Títulos de recipientes, estados e itens."
+      },
+      "body": {
+        "displayName": "Leitura",
+        "purpose": "Descrições e instruções."
+      },
+      "label": {
+        "displayName": "Controle",
+        "purpose": "Botões e navegação."
+      },
+      "caption": {
+        "displayName": "Atribuição",
+        "purpose": "Atribuição compacta da marca."
+      }
+    },
+    "shadows": [
+      {
+        "name": "notice",
+        "value": "0 10px 15px -3px rgb(0 0 0 / 0.1), 0 4px 6px -4px rgb(0 0 0 / 0.1)",
+        "purpose": "Único padrão recorrente de sombra: aviso sobreposto."
+      }
+    ],
+    "motion": [
+      {
+        "name": "color-transition",
+        "value": "150ms cubic-bezier(0.4, 0, 0.2, 1)",
+        "purpose": "Mudanças de cor nos botões compartilhados; removida em prefers-reduced-motion."
+      },
+      {
+        "name": "loading-pulse",
+        "value": "pulse 2s cubic-bezier(0.4, 0, 0.6, 1) infinite; 50% { opacity: 0.5; }",
+        "purpose": "Blocos de carregamento, somente em prefers-reduced-motion: no-preference."
+      }
+    ],
+    "breakpoints": [
+      {
+        "name": "sm",
+        "value": "640px"
+      },
+      {
+        "name": "md",
+        "value": "768px"
+      },
+      {
+        "name": "lg",
+        "value": "1024px"
+      },
+      {
+        "name": "xl",
+        "value": "1280px"
+      }
+    ]
+  },
+  "components": [
+    {
+      "name": "Botão primário",
+      "kind": "button",
+      "refersTo": "button-primary",
+      "description": "Ação principal compartilhada; hover navy, foco verde e estado desabilitado.",
+      "html": "<button class=\"ds-primary ds-focus\" type=\"button\">Explorar missões</button>",
+      "css": ".ds-primary{display:inline-flex;min-height:44px;align-items:center;justify-content:center;padding:12px 20px;border-radius:12px;font-size:14px;font-weight:600;line-height:20px;text-align:center;cursor:pointer;font-family:var(--font-sans,'Segoe UI',system-ui,sans-serif);transition:background-color 150ms cubic-bezier(0.4,0,0.2,1),color 150ms cubic-bezier(0.4,0,0.2,1);gap:8px;border:0;background:var(--color-brand,#087f68);color:var(--color-white,#fff);}.ds-primary:hover{background:var(--color-ink,#111c3d);}.ds-primary:disabled{background:var(--color-slate-200,oklch(92.9% 0.013 255.508));color:var(--color-slate-600,oklch(44.6% 0.043 257.281));cursor:not-allowed;}.ds-focus:focus-visible{outline:2px solid var(--color-brand,#087f68);outline-offset:4px;}@media(prefers-reduced-motion:reduce){.ds-primary{transition:none;}}"
+    },
+    {
+      "name": "Botão secundário",
+      "kind": "button",
+      "refersTo": "button-secondary",
+      "description": "Ação complementar com borda fina e fundo transparente.",
+      "html": "<button class=\"ds-secondary ds-focus\" type=\"button\">Acompanhar ranking</button>",
+      "css": ".ds-secondary{display:inline-flex;min-height:44px;align-items:center;justify-content:center;padding:12px 20px;border-radius:12px;font-size:14px;font-weight:600;line-height:20px;text-align:center;cursor:pointer;font-family:var(--font-sans,'Segoe UI',system-ui,sans-serif);transition:background-color 150ms cubic-bezier(0.4,0,0.2,1),color 150ms cubic-bezier(0.4,0,0.2,1);border:1px solid var(--color-slate-300,oklch(86.9% 0.022 252.894));background:transparent;color:var(--color-ink,#111c3d);}.ds-secondary:hover{background:var(--color-white,#fff);}.ds-secondary:disabled{cursor:not-allowed;}.ds-focus:focus-visible{outline:2px solid var(--color-brand,#087f68);outline-offset:4px;}@media(prefers-reduced-motion:reduce){.ds-secondary{transition:none;}}"
+    },
+    {
+      "name": "Campo de perfil",
+      "kind": "input",
+      "refersTo": "input",
+      "description": "Campo operacional com rótulo acima, foco verde e ajuda abaixo.",
+      "html": "<div class=\"ds-field\"><label class=\"ds-field-label\" for=\"ds-nickname\">Apelido</label><input class=\"ds-field-input ds-focus\" id=\"ds-nickname\" autocomplete=\"nickname\" minlength=\"2\" maxlength=\"80\" /><p class=\"ds-field-help\">O apelido poderá aparecer nos rankings. De 2 a 80 caracteres.</p></div>",
+      "css": ".ds-field{font-family:var(--font-sans,'Segoe UI',system-ui,sans-serif);color:var(--color-ink,#111c3d);font-size:16px;line-height:24px;}.ds-field-label{font-weight:600;}.ds-field-input{display:block;margin-top:8px;min-height:44px;width:100%;max-width:100%;padding:12px 16px;border:1px solid var(--color-slate-300,oklch(86.9% 0.022 252.894));border-radius:12px;background:var(--color-white,#fff);color:var(--color-ink,#111c3d);font:inherit;caret-color:var(--color-brand,#087f68);}.ds-field-input:disabled{opacity:.6;}.ds-field-help{margin:8px 0 0;font-size:14px;line-height:24px;color:var(--color-slate-600,oklch(44.6% 0.043 257.281));}.ds-focus:focus-visible{outline:2px solid var(--color-brand,#087f68);outline-offset:4px;}"
+    },
+    {
+      "name": "Navegação",
+      "kind": "nav",
+      "refersTo": "nav-item",
+      "description": "Itens com estado ativo verde claro e hover frio; composição aberta para demonstração.",
+      "html": "<nav class=\"ds-nav\" aria-label=\"Navegação principal\"><a class=\"ds-nav-link ds-focus ds-nav-active\" href=\"#\" aria-current=\"page\">Início</a><a class=\"ds-nav-link ds-focus\" href=\"#\">Missões</a><a class=\"ds-nav-link ds-focus\" href=\"#\">Ranking</a></nav>",
+      "css": ".ds-nav{display:flex;flex-wrap:wrap;gap:4px;font-family:var(--font-sans,'Segoe UI',system-ui,sans-serif);}.ds-nav-link{display:flex;min-height:44px;align-items:center;padding:8px 12px;border-radius:8px;color:var(--color-slate-600,oklch(44.6% 0.043 257.281));font-size:14px;font-weight:600;line-height:20px;text-decoration:none;}.ds-nav-link:hover{background:var(--color-paper,#f4f6fb);color:var(--color-ink,#111c3d);}.ds-nav-link.ds-nav-active{background:var(--color-brand-light,#e5f6ef);color:var(--color-brand,#087f68);}.ds-focus:focus-visible{outline:2px solid var(--color-brand,#087f68);outline-offset:4px;}"
+    },
+    {
+      "name": "Recipiente de conteúdo",
+      "kind": "card",
+      "refersTo": "card",
+      "description": "Superfície plana recorrente de formulários, detalhe e estados.",
+      "html": "<section class=\"ds-card\"><h2 class=\"ds-card-title\">Sua missão</h2><p class=\"ds-card-copy\">Consulte as orientações antes de registrar sua participação.</p></section>",
+      "css": ".ds-card{font-family:var(--font-sans,'Segoe UI',system-ui,sans-serif);border:1px solid var(--color-slate-200,oklch(92.9% 0.013 255.508));border-radius:16px;background:var(--color-white,#fff);padding:24px;color:var(--color-ink,#111c3d);}.ds-card-title{margin:0;font-size:20px;line-height:28px;font-weight:700;}.ds-card-copy{margin:16px 0 0;font-size:16px;line-height:28px;color:var(--color-slate-600,oklch(44.6% 0.043 257.281));}@media(min-width:640px){.ds-card{padding:32px;}}"
+    },
+    {
+      "name": "Informação de participação",
+      "kind": "custom",
+      "refersTo": "information",
+      "description": "Explicação verde clara; não implica confirmação de conclusão.",
+      "html": "<p class=\"ds-info\">Os pontos dependem da validação da participação pelo serviço.</p>",
+      "css": ".ds-info{font-family:var(--font-sans,'Segoe UI',system-ui,sans-serif);margin:0;padding:20px;border-radius:12px;background:var(--color-brand-light,#e5f6ef);color:var(--color-brand,#087f68);font-size:16px;line-height:28px;}"
+    },
+    {
+      "name": "Aviso de resultado",
+      "kind": "custom",
+      "refersTo": "notice",
+      "description": "Aviso de resultado real; a aplicação o fixa à base da viewport com anúncio de status.",
+      "html": "<div class=\"ds-notice\" role=\"status\"><p class=\"ds-notice-copy\">Seu perfil foi atualizado.</p><button class=\"ds-notice-close\" type=\"button\" aria-label=\"Fechar aviso\">Fechar</button></div>",
+      "css": ".ds-notice{font-family:var(--font-sans,'Segoe UI',system-ui,sans-serif);display:flex;align-items:flex-start;justify-content:space-between;gap:16px;max-width:576px;padding:20px;border-radius:12px;background:var(--color-ink,#111c3d);color:var(--color-white,#fff);box-shadow:0 10px 15px -3px rgb(0 0 0 / .1),0 4px 6px -4px rgb(0 0 0 / .1);}.ds-notice-copy{margin:0;font-size:16px;line-height:24px;}.ds-notice-close{font-family:var(--font-sans,'Segoe UI',system-ui,sans-serif);min-height:44px;flex-shrink:0;border:0;border-radius:8px;background:transparent;padding:0 8px;color:inherit;font-size:16px;line-height:24px;text-decoration:underline;text-underline-offset:4px;cursor:pointer;}.ds-notice-close:focus-visible{outline:2px solid var(--color-white,#fff);outline-offset:4px;}"
+    },
+    {
+      "name": "Estado vazio",
+      "kind": "custom",
+      "refersTo": "empty-state",
+      "description": "Ausência de dados explicitada com borda tracejada e texto centralizado.",
+      "html": "<section class=\"ds-empty\" role=\"status\"><h2 class=\"ds-empty-title\">Sua lista está vazia</h2><p class=\"ds-empty-copy\">Adicione o código de um amigo para acompanhar a participação dele.</p></section>",
+      "css": ".ds-empty{font-family:var(--font-sans,'Segoe UI',system-ui,sans-serif);border:1px dashed var(--color-slate-300,oklch(86.9% 0.022 252.894));border-radius:16px;padding:32px;text-align:center;color:var(--color-ink,#111c3d);}.ds-empty-title{margin:0;font-size:20px;font-weight:700;line-height:28px;}.ds-empty-copy{margin:12px auto 0;max-width:576px;font-size:16px;line-height:28px;color:var(--color-slate-600,oklch(44.6% 0.043 257.281));}"
+    }
+  ],
+  "narrative": {
+    "northStar": "Gamificação sustentável da Soul Up, interface operacional com identidade do protótipo Alpha4",
+    "overview": "Este documento registra o sistema que o frontend implementa. O norte é uma descrição factual da identidade existente, sem nova metáfora ou marca. A referência visual é a página 13 do PDF da Sprint 3, preservada em [pagina13-X41.png](../tmp/pdfs/pagina13-X41.png); a aplicação também apresenta o recorte original em `public/images/missoes-sprint3.png`.\n\nA interface usa fundo claro, texto azul-marinho, verde para ações e superfícies brancas delimitadas. A densidade permite ler instruções e completar tarefas em telas pequenas. Estados de carregamento, vazio, falha e conclusão acompanham a operação real. A home apresenta a proposta; as jornadas de participação privilegiam instruções e controles explícitos. Essas diferenças de composição não criam paletas ou sistemas separados.",
+    "keyCharacteristics": [
+      "Identidade azul-marinho e verde extraída do frontend e da referência Alpha4.",
+      "Superfícies claras, bordas discretas e cantos moderadamente arredondados.",
+      "Hierarquia textual direta, controles legíveis e navegação responsiva.",
+      "Feedback de operações reais, com distinção entre conteúdo e imagem do protótipo."
+    ],
+    "rules": [
+      {
+        "name": "The Estado Real Rule",
+        "body": "Cor e mensagem de estado acompanham o resultado da operação; um verde informativo não substitui confirmação do serviço.",
+        "section": "colors"
+      },
+      {
+        "name": "The Largura Útil Rule",
+        "body": "Texto variável e ações precisam caber no recipiente disponível, inclusive na lista de amigos em viewport estreita.",
+        "section": "layout"
+      },
+      {
+        "name": "The Superfície Plana Rule",
+        "body": "Recipientes de conteúdo usam cor e borda; a sombra registrada pertence ao aviso sobreposto.",
+        "section": "elevation"
+      }
+    ],
+    "dos": [
+      "**Do** usar os tokens de identidade de `src/styles.css` e utilitários Tailwind nos novos componentes.",
+      "**Do** manter texto de estado, foco visível e rótulos associados aos campos.",
+      "**Do** preservar o espaço dos controles e a quebra de texto variável em telas estreitas.",
+      "**Do** identificar a imagem original como protótipo de referência, sem apresentá-la como conta real.",
+      "**Do** manter a distinção entre informação de participação e confirmação retornada pelo serviço."
+    ],
+    "donts": [
+      "**Don't** substituir a identidade do PDF por uma nova marca ou paleta.",
+      "**Don't** usar UI kits, templates prontos ou dados fictícios como prova visual de integração.",
+      "**Don't** transformar o hover local de contato/FAQ em uma alteração silenciosa do botão compartilhado.",
+      "**Don't** aplicar a sombra do aviso como padrão de todos os recipientes.",
+      "**Don't** transformar a composição promocional da home em requisito de layout das jornadas operacionais."
+    ]
+  }
+}
