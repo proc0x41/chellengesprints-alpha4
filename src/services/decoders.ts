@@ -72,6 +72,11 @@ export function decodeParticipant(value: unknown): Participant {
   return { id: text(data.id), name: text(data.name), uf: text(data.uf), community: data.community };
 }
 
+export function decodeParticipants(value: unknown): Participant[] {
+  if (!Array.isArray(value)) return invalid();
+  return value.map(decodeParticipant);
+}
+
 export function decodeSession(value: unknown): Session {
   const data = record(value);
   return { participant: decodeParticipant(data.participant), token: text(data.token) };

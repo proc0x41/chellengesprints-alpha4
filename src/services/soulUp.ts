@@ -10,6 +10,7 @@ import {
   decodeMission,
   decodeMissions,
   decodeParticipant,
+  decodeParticipants,
   decodeRanking,
   decodeSession,
   record,
@@ -114,6 +115,26 @@ export const participantService = {
   },
   async remove() {
     await requestJson(apiUrl('/participantes/me'), {
+      method: 'DELETE',
+      headers: participantHeaders(true),
+    });
+  },
+};
+
+export const friendsService = {
+  async list(signal: AbortSignal) {
+    return decodeParticipants(
+      await requestJson(apiUrl('/amigos'), { signal, headers: participantHeaders(true) }),
+    );
+  },
+  async add(id: string) {
+    await requestJson(apiUrl(`/amigos/${encodeURIComponent(id)}`), {
+      method: 'POST',
+      headers: participantHeaders(true),
+    });
+  },
+  async remove(id: string) {
+    await requestJson(apiUrl(`/amigos/${encodeURIComponent(id)}`), {
       method: 'DELETE',
       headers: participantHeaders(true),
     });

@@ -1,16 +1,19 @@
 import { useState } from 'react';
 import type { FormEvent } from 'react';
+import { FriendsPanel } from '../components/FriendsPanel';
 import { buttonClass, PageHeader, secondaryButtonClass } from '../components/ui';
 import { useNotice } from '../context/NoticeContext';
 import { useSession } from '../context/SessionContext';
 import { states } from '../data/states';
+import { usePageTitle } from '../hooks/usePageTitle';
 import { participantService } from '../services/soulUp';
 
 const inputClass =
   'mt-2 min-h-11 w-full rounded-xl border border-slate-300 bg-white px-4 py-3 disabled:opacity-60';
 
 export function AccountPage() {
-  const { session, setSession } = useSession();
+  const { session, setSession, storageAvailable } = useSession();
+  usePageTitle(session ? 'Seu perfil de participação' : 'Comece a participar');
   const { notify } = useNotice();
   const [name, setName] = useState(session?.participant.name ?? '');
   const [uf, setUf] = useState(session?.participant.uf ?? '');
@@ -18,6 +21,16 @@ export function AccountPage() {
   const [busy, setBusy] = useState(false);
   const [error, setError] = useState('');
   const [confirmDelete, setConfirmDelete] = useState(false);
+
+  function forgetSession() {
+    setSession(null);
+    setConfirmDelete(false);
+    setError('');
+    setName('');
+    setUf('');
+    setCommunity('');
+    notify('Acesso removido desta aba. O perfil no serviço não foi excluído.');
+  }
 
   async function submit(event: FormEvent<HTMLFormElement>) {
     event.preventDefault();
@@ -76,6 +89,12 @@ export function AccountPage() {
         className="space-y-5 rounded-2xl border border-slate-200 bg-white p-6 sm:p-8"
         aria-busy={busy}
       >
+        {!storageAvailable && (
+          <p role="status" className="rounded-xl bg-amber-100 p-4 text-sm leading-6 text-amber-950">
+            O navegador bloqueou o armazenamento da sessão. Seu perfil foi salvo no serviço, mas o
+            acesso nesta página será perdido ao recarregar.
+          </p>
+        )}
         <div>
           <label htmlFor="apelido" className="font-semibold">
             Apelido
@@ -143,9 +162,24 @@ export function AccountPage() {
           {busy ? 'Salvando…' : session ? 'Salvar alterações' : 'Criar perfil'}
         </button>
       </form>
+      {session && <FriendsPanel key={session.participant.id} />}
       {session && (
         <section className="mt-8 space-y-5">
           <h2 className="text-xl font-bold">Gerenciar perfil</h2>
+          <div>
+            <button
+              type="button"
+              disabled={busy}
+              className={secondaryButtonClass}
+              onClick={forgetSession}
+            >
+              Esquecer acesso nesta aba
+            </button>
+            <p className="mt-2 text-sm leading-6 text-slate-600">
+              Use esta opção se a sessão não funcionar ou quiser criar outro perfil. O acesso
+              anterior será perdido; os dados no serviço permanecem até a exclusão.
+            </p>
+          </div>
           <p className="break-all text-sm leading-6 text-slate-600">
             Código para compartilhar com amigos:{' '}
             <strong className="font-medium text-ink">{session.participant.id}</strong>

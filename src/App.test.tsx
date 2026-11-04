@@ -4,7 +4,7 @@ import { afterEach, describe, expect, it, vi } from 'vitest';
 import { App } from './App';
 import { ApiError } from './services/http';
 import { saveSession } from './services/session';
-import { soulUpService } from './services/soulUp';
+import { friendsService, soulUpService } from './services/soulUp';
 import type { Mission } from './types/domain';
 
 const mission: Mission = {
@@ -17,7 +17,10 @@ const mission: Mission = {
   requiresEvidence: true,
 };
 
-afterEach(() => sessionStorage.clear());
+afterEach(() => {
+  vi.restoreAllMocks();
+  saveSession(null);
+});
 
 function open(path: string, authenticated = false) {
   if (authenticated)
@@ -109,13 +112,11 @@ describe('Navegação e fluxos da Soul Up', () => {
   });
 
   it('consulta o ranking selecionado e mostra a temporada recebida', async () => {
-    const get = vi
-      .spyOn(soulUpService, 'getRanking')
-      .mockImplementation(async (scope) => ({
-        scope,
-        season: '2026/6',
-        entries: [{ id: 'p', position: 1, name: 'Perfil de teste', points: 50 }],
-      }));
+    const get = vi.spyOn(soulUpService, 'getRanking').mockImplementation(async (scope) => ({
+      scope,
+      season: '2026/6',
+      entries: [{ id: 'p', position: 1, name: 'Perfil de teste', points: 50 }],
+    }));
     open('/ranking', true);
     expect(await screen.findByText('Temporada 2026/6')).toBeInTheDocument();
     fireEvent.change(screen.getByLabelText('Abrangência'), { target: { value: 'amigos' } });
@@ -132,5 +133,16 @@ describe('Navegação e fluxos da Soul Up', () => {
       'mailto:572866@fiap.com.br?subject=D%C3%BAvida%20%26%20sugest%C3%A3o',
     );
     expect(screen.getByText(/O site não envia nem armazena/)).toBeInTheDocument();
+  });
+
+  it('oferece descarte local de sessão sem solicitar exclusão do perfil', async () => {
+    vi.spyOn(friendsService, 'list').mockResolvedValue([]);
+    open('/conta', true);
+    fireEvent.click(screen.getByRole('button', { name: 'Esquecer acesso nesta aba' }));
+    expect(await screen.findByRole('heading', { name: 'Comece a participar' })).toBeInTheDocument();
+    expect(
+      screen.getByText('Acesso removido desta aba. O perfil no serviço não foi excluído.'),
+    ).toBeInTheDocument();
+    expect(document.title).toContain('Comece a participar');
   });
 });
