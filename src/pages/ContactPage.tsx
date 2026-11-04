@@ -5,8 +5,7 @@ export function ContactPage() {
   const [selectedRm, setSelectedRm] = useState(teamMembers[0].rm);
   const [subject, setSubject] = useState('Contato sobre o projeto Alpha4');
   const [message, setMessage] = useState('');
-  const recipient =
-    teamMembers.find((member) => member.rm === selectedRm) ?? teamMembers[0];
+  const recipient = teamMembers.find((member) => member.rm === selectedRm) ?? teamMembers[0];
   const emailLink = `mailto:${recipient.email}?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(message)}`;
 
   return (
@@ -16,16 +15,21 @@ export function ContactPage() {
           Fale com a Alpha4
         </h1>
         <p className="text-base leading-7 text-slate-600 sm:text-lg">
-          Tem uma dúvida ou sugestão sobre o projeto? Escolha um integrante e
-          prepare uma mensagem para a equipe.
+          Tem uma dúvida ou sugestão sobre o projeto? Escolha um integrante e prepare uma mensagem
+          para a equipe.
         </p>
       </header>
 
-      <section aria-labelledby="contact-title" className="max-w-3xl rounded-2xl border border-slate-200 bg-white p-6 sm:p-8">
-        <h2 id="contact-title" className="text-2xl font-bold text-[#111c3d]">Prepare seu e-mail</h2>
+      <section
+        aria-labelledby="contact-title"
+        className="max-w-3xl rounded-2xl border border-slate-200 bg-white p-6 sm:p-8"
+      >
+        <h2 id="contact-title" className="text-2xl font-bold text-[#111c3d]">
+          Prepare seu e-mail
+        </h2>
         <p id="email-help" className="mt-3 leading-7 text-slate-600">
-          O botão abre seu aplicativo de e-mail com o texto preenchido. Revise e
-          envie a mensagem por lá. O site não envia nem armazena este contato.
+          O botão abre seu aplicativo de e-mail com o texto preenchido. Revise e envie a mensagem
+          por lá. O site não envia nem armazena este contato.
         </p>
 
         <div className="mt-6 space-y-5">
@@ -78,7 +82,9 @@ export function ContactPage() {
               onChange={(event) => setMessage(event.target.value)}
               aria-describedby="email-help message-help"
             />
-            <p id="message-help" className="mt-2 text-sm text-slate-600">Até 1.500 caracteres.</p>
+            <p id="message-help" className="mt-2 text-sm text-slate-600">
+              Até 1.500 caracteres.
+            </p>
           </div>
 
           <a
@@ -95,7 +101,8 @@ export function ContactPage() {
               href={`mailto:${recipient.email}`}
             >
               {recipient.email}
-            </a>.
+            </a>
+            .
           </p>
         </div>
       </section>

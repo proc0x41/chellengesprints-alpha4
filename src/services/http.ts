@@ -1,5 +1,8 @@
 export class ApiError extends Error {
-  constructor(message: string, public readonly status?: number) {
+  constructor(
+    message: string,
+    public readonly status?: number,
+  ) {
     super(message);
     this.name = 'ApiError';
   }
@@ -17,9 +20,7 @@ export async function requestJson(
 ): Promise<unknown> {
   const timeout = new AbortController();
   const timer = setTimeout(() => timeout.abort(), timeoutMs);
-  const combinedSignal = signal
-    ? AbortSignal.any([signal, timeout.signal])
-    : timeout.signal;
+  const combinedSignal = signal ? AbortSignal.any([signal, timeout.signal]) : timeout.signal;
   const headers = new Headers(options.headers);
   headers.set('Accept', 'application/json');
   if (body !== undefined) headers.set('Content-Type', 'application/json');
@@ -32,11 +33,12 @@ export async function requestJson(
       signal: combinedSignal,
     });
     if (!response.ok) {
-      const message = response.status === 404
-        ? 'O conteúdo solicitado não foi encontrado.'
-        : response.status === 401 || response.status === 403
-          ? 'Você não tem acesso a esta operação. Verifique sua sessão.'
-          : 'O serviço não conseguiu concluir a operação. Tente novamente.';
+      const message =
+        response.status === 404
+          ? 'O conteúdo solicitado não foi encontrado.'
+          : response.status === 401 || response.status === 403
+            ? 'Você não tem acesso a esta operação. Verifique sua sessão.'
+            : 'O serviço não conseguiu concluir a operação. Tente novamente.';
       throw new ApiError(message, response.status);
     }
     if (response.status === 204) return null;
@@ -51,7 +53,9 @@ export async function requestJson(
       throw new ApiError('O serviço demorou para responder. Tente novamente.');
     }
     if (error instanceof ApiError) throw error;
-    throw new ApiError('Não foi possível conectar ao serviço. Verifique sua conexão e tente novamente.');
+    throw new ApiError(
+      'Não foi possível conectar ao serviço. Verifique sua conexão e tente novamente.',
+    );
   } finally {
     clearTimeout(timer);
   }

@@ -52,6 +52,4 @@ export interface Session {
 }
 
 export type RemoteState<T> =
-  | { status: 'loading' }
-  | { status: 'success'; data: T }
-  | { status: 'error'; error: Error };
+  { status: 'loading' } | { status: 'success'; data: T } | { status: 'error'; error: Error };

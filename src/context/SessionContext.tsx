@@ -16,7 +16,9 @@ export function SessionProvider({ children }: { children: ReactNode }) {
     saveSession(value);
     updateSession(value);
   }
-  return <SessionContext.Provider value={{ session, setSession }}>{children}</SessionContext.Provider>;
+  return (
+    <SessionContext.Provider value={{ session, setSession }}>{children}</SessionContext.Provider>
+  );
 }
 
 export function useSession() {

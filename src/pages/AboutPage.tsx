@@ -35,20 +35,23 @@ export function AboutPage() {
           Uma ação de cada vez. Um impacto em comunidade.
         </h1>
         <p className="text-base leading-7 text-slate-600 sm:text-lg">
-          A Alpha4 propõe um sistema de gamificação para a Soul Up, conectando
-          hábitos sustentáveis, reconhecimento e participação coletiva.
+          A Alpha4 propõe um sistema de gamificação para a Soul Up, conectando hábitos sustentáveis,
+          reconhecimento e participação coletiva.
         </p>
       </header>
 
-      <section aria-labelledby="problem-title" className="rounded-2xl border border-slate-200 bg-white p-6 sm:p-8">
+      <section
+        aria-labelledby="problem-title"
+        className="rounded-2xl border border-slate-200 bg-white p-6 sm:p-8"
+      >
         <h2 id="problem-title" className="text-2xl font-bold text-[#111c3d]">
           Da consciência à prática
         </h2>
         <p className="mt-4 max-w-3xl leading-7 text-slate-600">
-          Reconhecer a importância da sustentabilidade nem sempre é suficiente
-          para manter uma rotina. A falta de incentivos e a sensação de que uma
-          ação individual faz pouca diferença podem afastar as pessoas. Nossa
-          proposta aproxima ações cotidianas de objetivos visíveis e compartilhados.
+          Reconhecer a importância da sustentabilidade nem sempre é suficiente para manter uma
+          rotina. A falta de incentivos e a sensação de que uma ação individual faz pouca diferença
+          podem afastar as pessoas. Nossa proposta aproxima ações cotidianas de objetivos visíveis e
+          compartilhados.
         </p>
       </section>
 
@@ -69,10 +72,9 @@ export function AboutPage() {
       <aside className="rounded-2xl border border-orange-200 bg-orange-50 p-6 text-orange-950">
         <h2 className="font-bold">Sobre esta entrega</h2>
         <p className="mt-2 leading-7">
-          Projeto acadêmico da turma 1TDSPW da FIAP, baseado na proposta da
-          Alpha4 para a Soul Up. Os recursos descritos nesta página representam a
-          proposta da Sprint 3. A disponibilidade de operações reais depende da
-          integração com a API Java do grupo.
+          Projeto acadêmico da turma 1TDSPW da FIAP, baseado na proposta da Alpha4 para a Soul Up.
+          Os recursos descritos nesta página representam a proposta da Sprint 3. A disponibilidade
+          de operações reais depende da integração com a API Java do grupo.
         </p>
       </aside>
     </div>

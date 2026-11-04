@@ -20,13 +20,20 @@ function nonNegativeInteger(value: unknown): number {
 
 export function decodeMission(value: unknown): Mission {
   const data = record(value);
-  if (!['ambiental', 'social', 'governanca'].includes(String(data.category))
-    || !['disponivel', 'em-analise', 'concluida'].includes(String(data.status))
-    || typeof data.requiresEvidence !== 'boolean') return invalid();
+  if (
+    !['ambiental', 'social', 'governanca'].includes(String(data.category)) ||
+    !['disponivel', 'em-analise', 'concluida'].includes(String(data.status)) ||
+    typeof data.requiresEvidence !== 'boolean'
+  )
+    return invalid();
   return {
-    id: text(data.id), title: text(data.title), description: text(data.description),
-    category: data.category as Mission['category'], status: data.status as Mission['status'],
-    points: nonNegativeInteger(data.points), requiresEvidence: data.requiresEvidence,
+    id: text(data.id),
+    title: text(data.title),
+    description: text(data.description),
+    category: data.category as Mission['category'],
+    status: data.status as Mission['status'],
+    points: nonNegativeInteger(data.points),
+    requiresEvidence: data.requiresEvidence,
   };
 }
 
@@ -37,14 +44,24 @@ export function decodeMissions(value: unknown): Mission[] {
 
 export function decodeRanking(value: unknown): Ranking {
   const data = record(value);
-  if (!['global', 'estadual', 'comunidade', 'amigos'].includes(String(data.scope)) || !Array.isArray(data.entries)) return invalid();
+  if (
+    !['global', 'estadual', 'comunidade', 'amigos'].includes(String(data.scope)) ||
+    !Array.isArray(data.entries)
+  )
+    return invalid();
   return {
-    scope: data.scope as Ranking['scope'], season: text(data.season),
+    scope: data.scope as Ranking['scope'],
+    season: text(data.season),
     entries: data.entries.map((item) => {
       const entry = record(item);
       const position = nonNegativeInteger(entry.position);
       if (position < 1) return invalid();
-      return { id: text(entry.id), name: text(entry.name), position, points: nonNegativeInteger(entry.points) };
+      return {
+        id: text(entry.id),
+        name: text(entry.name),
+        position,
+        points: nonNegativeInteger(entry.points),
+      };
     }),
   };
 }

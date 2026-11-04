@@ -1,18 +1,38 @@
-@import "tailwindcss";
+@import 'tailwindcss';
 
 @theme {
   --color-ink: #111c3d;
   --color-brand: #087f68;
   --color-brand-light: #e5f6ef;
   --color-paper: #f4f6fb;
-  --font-sans: "Segoe UI", system-ui, sans-serif;
+  --font-sans: 'Segoe UI', system-ui, sans-serif;
 }
 
 @layer base {
-  body { @apply m-0 bg-paper font-sans text-ink antialiased; }
-  button, summary, select { @apply cursor-pointer; }
-  button:disabled { @apply cursor-not-allowed; }
-  a, button, input, textarea, select, summary { @apply focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-brand; }
-  input, textarea { @apply caret-brand; }
-  ::selection { @apply bg-ink text-white; }
+  body {
+    @apply m-0 bg-paper font-sans text-ink antialiased;
+  }
+  button,
+  summary,
+  select {
+    @apply cursor-pointer;
+  }
+  button:disabled {
+    @apply cursor-not-allowed;
+  }
+  a,
+  button,
+  input,
+  textarea,
+  select,
+  summary {
+    @apply focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-brand;
+  }
+  input,
+  textarea {
+    @apply caret-brand;
+  }
+  ::selection {
+    @apply bg-ink text-white;
+  }
 }

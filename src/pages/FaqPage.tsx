@@ -71,7 +71,10 @@ export function FaqPage() {
         <p className="mt-2 leading-7 text-slate-600">
           Escolha um integrante e prepare sua mensagem na página de contato.
         </p>
-        <Link className="mt-4 inline-flex min-h-11 items-center rounded-xl bg-[#087f68] px-5 py-3 font-semibold text-white hover:bg-[#066653] focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-[#087f68]" to="/contato">
+        <Link
+          className="mt-4 inline-flex min-h-11 items-center rounded-xl bg-[#087f68] px-5 py-3 font-semibold text-white hover:bg-[#066653] focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-[#087f68]"
+          to="/contato"
+        >
           Entrar em contato
         </Link>
       </div>

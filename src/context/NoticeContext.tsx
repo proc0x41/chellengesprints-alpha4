@@ -12,11 +12,23 @@ export function NoticeProvider({ children }: { children: ReactNode }) {
   return (
     <NoticeContext.Provider value={{ notify: setMessage }}>
       {children}
-      <div className="fixed inset-x-4 bottom-4 z-30 mx-auto max-w-xl" role="status" aria-live="polite" aria-atomic="true">
+      <div
+        className="fixed inset-x-4 bottom-4 z-30 mx-auto max-w-xl"
+        role="status"
+        aria-live="polite"
+        aria-atomic="true"
+      >
         {message && (
           <div className="flex items-start justify-between gap-4 rounded-xl bg-ink p-5 text-white shadow-lg">
             <p className="leading-6">{message}</p>
-            <button className="min-h-11 shrink-0 rounded-lg px-2 underline underline-offset-4 focus-visible:outline-white" onClick={() => setMessage('')} type="button" aria-label="Fechar aviso">Fechar</button>
+            <button
+              className="min-h-11 shrink-0 rounded-lg px-2 underline underline-offset-4 focus-visible:outline-white"
+              onClick={() => setMessage('')}
+              type="button"
+              aria-label="Fechar aviso"
+            >
+              Fechar
+            </button>
           </div>
         )}
       </div>

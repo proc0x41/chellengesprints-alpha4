@@ -18,7 +18,8 @@ export function useRemoteData<T>(load: (signal: AbortSignal) => Promise<T>) {
         if (!controller.signal.aborted) {
           setState({
             status: 'error',
-            error: error instanceof Error ? error : new Error('Não foi possível carregar os dados.'),
+            error:
+              error instanceof Error ? error : new Error('Não foi possível carregar os dados.'),
           });
         }
       },
