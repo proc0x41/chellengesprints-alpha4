@@ -11,8 +11,9 @@ localmente, incluindo listagem, detalhe, envio e aprovação de evidência,
 ranking, atualização e exclusão de perfil. Revisões independentes conferiram
 o código, os testes e as capturas nas diferentes resoluções.
 O grupo informou as URLs públicas do frontend e do backend. A entrega ainda
-depende da confirmação da integração pública, da URL do vídeo no YouTube e
-dos links individuais de GitHub e LinkedIn. As cinco fotos foram recuperadas
+depende da confirmação da integração pública e da URL do vídeo no YouTube.
+Os links individuais foram atualizados com os endereços indicados pelo grupo.
+As cinco fotos foram recuperadas
 do frontend da Sprint 3 fornecido pela equipe.
 
 ## Tecnologias utilizadas
@@ -152,17 +153,16 @@ docs/           contrato e fluxo de versionamento
 Todos os integrantes são da turma **1TDSPW**. Nomes e RMs seguem o documento
 `Alpha4_Sprint3.pdf`, fornecido pela equipe.
 
-| Nome completo                   | RM     | Contato              | Foto                                                                                        | GitHub        | LinkedIn      |
-| ------------------------------- | ------ | -------------------- | ------------------------------------------------------------------------------------------- | ------------- | ------------- |
-| Vinicius de Oliveira            | 561862 | rm561862@fiap.com.br | <img src="public/images/team/vinicius.jpg" width="80" alt="Vinicius de Oliveira">           | Não informado | Não informado |
-| Robison Custodio Junior         | 572866 | rm572866@fiap.com.br | <img src="public/images/team/junior.jpeg" width="80" alt="Robison Custodio Junior">         | Não informado | Não informado |
-| Lucas Fernando Silva            | 564848 | rm564848@fiap.com.br | <img src="public/images/team/lucas.jpeg" width="80" alt="Lucas Fernando Silva">             | Não informado | Não informado |
-| Thiago Shimizu Sodré dos Santos | 572867 | rm572867@fiap.com.br | <img src="public/images/team/thiago.jpeg" width="80" alt="Thiago Shimizu Sodré dos Santos"> | Não informado | Não informado |
-| Arthur Mendes Garcia            | 571703 | rm571703@fiap.com.br | <img src="public/images/team/arthur.jpeg" width="80" alt="Arthur Mendes Garcia">            | Não informado | Não informado |
+| Nome completo                   | RM     | Contato              | Foto                                                                                        | GitHub                                       | LinkedIn                                                             |
+| ------------------------------- | ------ | -------------------- | ------------------------------------------------------------------------------------------- | -------------------------------------------- | -------------------------------------------------------------------- |
+| Vinicius de Oliveira            | 561862 | rm561862@fiap.com.br | <img src="public/images/team/vinicius.jpg" width="80" alt="Vinicius de Oliveira">           | [GitHub](https://github.com/Vinicius-0lvr)   | [LinkedIn](https://www.linkedin.com/in/vinicius-oliveira-101137252/) |
+| Robison Custodio Junior         | 572866 | rm572866@fiap.com.br | <img src="public/images/team/junior.jpeg" width="80" alt="Robison Custodio Junior">         | [GitHub](https://github.com/Junior4744)      | [LinkedIn](https://www.linkedin.com/in/robinson-custodio-junior/)    |
+| Lucas Fernando Silva            | 564848 | rm564848@fiap.com.br | <img src="public/images/team/lucas.jpeg" width="80" alt="Lucas Fernando Silva">             | [GitHub](https://github.com/lucas-silva8077) | [LinkedIn](https://www.linkedin.com/in/lucas-fernando-5aa8b6193/)    |
+| Thiago Shimizu Sodré dos Santos | 572867 | rm572867@fiap.com.br | <img src="public/images/team/thiago.jpeg" width="80" alt="Thiago Shimizu Sodré dos Santos"> | [GitHub](https://github.com/thssd)           | [LinkedIn](https://www.linkedin.com/in/thiagoshimizusodre/)          |
+| Arthur Mendes Garcia            | 571703 | rm571703@fiap.com.br | <img src="public/images/team/arthur.jpeg" width="80" alt="Arthur Mendes Garcia">            | [GitHub](https://github.com/proc0x41)        | [LinkedIn](https://www.linkedin.com/in/arthur-mendes-garcia/)        |
 
-Os links individuais ainda precisam ser fornecidos antes da entrega. O projeto
-da Sprint 3 contém as fotos, mas não os perfis individuais; o link de um
-repositório não foi usado como substituto dos cinco perfis.
+As fotos vêm do projeto da Sprint 3; os endereços individuais foram indicados
+posteriormente pelo grupo.
 O histórico utiliza Conventional Commits em português, com rodízio de
 identidades locais solicitado pela equipe. Veja [GitFlow](docs/GITFLOW.md).
 
