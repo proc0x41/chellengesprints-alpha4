@@ -40,15 +40,14 @@ linhas e coluna separada para a pontuação. Build e renderização em seis
 larguras passaram; a revisão independente confirmou a correção no arquivo
 e na página em mobile e desktop. O original foi preservado como referência.
 
-## Pendências para a entrega completa
+## Publicação e pacote
 
 - URLs públicas informadas pelo grupo: frontend na Vercel e API no Render.
-- Conferir integração pela URL pública, inclusive acesso direto às rotas.
-- Confirmar a origem da Vercel em `CORS_ORIGINS`: a última verificação retornou
-  403 para essa origem, embora saúde e missões sem Origin tenham respondido 200.
+- A equipe informou que a configuração CORS foi resolvida e a API está online.
+  Essa atualização registra a informação da equipe, sem repetir os testes remotos.
 - Links individuais de GitHub e LinkedIn incluídos conforme orientação do grupo.
-- Publicar vídeo funcional da Sprint 4 com até três minutos no YouTube.
-- Gerar/revalidar ZIP final e submetê-lo exclusivamente no Portal do Aluno.
+- O pacote de fontes é gerado com `npm run package` e tem a integridade conferida.
+- Submeter o ZIP exclusivamente pelo Portal do Aluno.
 
 As cinco fotos foram recuperadas do frontend da Sprint 3 e copiadas byte a
 byte, com o vínculo nome/arquivo definido pela página de integrantes original.
