@@ -10,8 +10,7 @@ A aplicação compila e a integração com a API Spring Boot foi verificada
 localmente, incluindo listagem, detalhe, envio e aprovação de evidência,
 ranking, atualização e exclusão de perfil. Revisões independentes conferiram
 o código, os testes e as capturas nas diferentes resoluções.
-O grupo informou as URLs públicas do frontend e do backend. A entrega ainda
-depende da confirmação da integração pública e da URL do vídeo no YouTube.
+O frontend está publicado na Vercel e a API Spring Boot está publicada no Render.
 Os links individuais foram atualizados com os endereços indicados pelo grupo.
 As cinco fotos foram recuperadas
 do frontend da Sprint 3 fornecido pela equipe.
@@ -31,18 +30,12 @@ Axios ou templates prontos.
 
 ## Como usar
 
-| Recurso                      | Endereço / situação                                      |
-| ---------------------------- | -------------------------------------------------------- |
-| GitHub do frontend           | https://github.com/proc0x41/chellengesprints-alpha4      |
-| GitHub da API Java           | https://github.com/proc0x41/challengesprints-java        |
-| Frontend na Vercel           | https://chellengesprints-alpha4.vercel.app/              |
-| API Java publicada           | https://challengesprints-java.onrender.com/api           |
-| Vídeo da Sprint 4 no YouTube | Gravação local concluída; publicação no YouTube pendente |
-
-O pitch da Sprint 3 citado no PDF não substitui a demonstração funcional da Sprint 4.
-Na última verificação remota, saúde e missões da API responderam 200, mas
-a origem da Vercel recebeu 403. Confirmar `CORS_ORIGINS` no Render e repetir
-a verificação antes de considerar a integração pública concluída.
+| Recurso            | Endereço                                            |
+| ------------------ | --------------------------------------------------- |
+| GitHub do frontend | https://github.com/proc0x41/chellengesprints-alpha4 |
+| GitHub da API Java | https://github.com/proc0x41/challengesprints-java   |
+| Frontend na Vercel | https://chellengesprints-alpha4.vercel.app/         |
+| API Java publicada | https://challengesprints-java.onrender.com/api      |
 
 ### Executar localmente
 
