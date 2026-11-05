@@ -46,7 +46,7 @@ e na página em mobile e desktop. O original foi preservado como referência.
 - Conferir integração pela URL pública, inclusive acesso direto às rotas.
 - Confirmar a origem da Vercel em `CORS_ORIGINS`: a última verificação retornou
   403 para essa origem, embora saúde e missões sem Origin tenham respondido 200.
-- Fornecer links individuais de GitHub e LinkedIn de todos.
+- Links individuais de GitHub e LinkedIn incluídos conforme orientação do grupo.
 - Publicar vídeo funcional da Sprint 4 com até três minutos no YouTube.
 - Gerar/revalidar ZIP final e submetê-lo exclusivamente no Portal do Aluno.
 
