@@ -42,9 +42,16 @@ e na página em mobile e desktop. O original foi preservado como referência.
 
 ## Pendências para a entrega completa
 
-- Publicar frontend na Vercel e Java em serviço com banco persistente.
+- URLs públicas informadas pelo grupo: frontend na Vercel e API no Render.
 - Conferir integração pela URL pública, inclusive acesso direto às rotas.
-- Preencher URLs reais de frontend, API e vídeo no README.
-- Fornecer fotos e links individuais de GitHub e LinkedIn de todos.
+- Confirmar a origem da Vercel em `CORS_ORIGINS`: a última verificação retornou
+  403 para essa origem, embora saúde e missões sem Origin tenham respondido 200.
+- Fornecer links individuais de GitHub e LinkedIn de todos.
 - Publicar vídeo funcional da Sprint 4 com até três minutos no YouTube.
 - Gerar/revalidar ZIP final e submetê-lo exclusivamente no Portal do Aluno.
+
+As cinco fotos foram recuperadas do frontend da Sprint 3 e copiadas byte a
+byte, com o vínculo nome/arquivo definido pela página de integrantes original.
+Build aprovado e fotos verificadas no navegador em desktop e mobile, sem
+transbordamento horizontal. As capturas estão em `integrantes-desktop.png`
+e `integrantes-mobile.png` na pasta `docs/screenshots/`.
