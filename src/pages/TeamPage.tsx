@@ -81,8 +81,8 @@ export function TeamPage() {
       </div>
 
       <p className="max-w-3xl text-sm leading-6 text-slate-600">
-        Nomes, RMs e turma seguem o documento da Alpha4 da Sprint 3. Fotos e perfis profissionais
-        serão exibidos quando forem fornecidos pela equipe.
+        Nomes, RMs e turma seguem o documento da Alpha4 da Sprint 3. As fotos foram fornecidas pela
+        equipe no frontend da Sprint 3.
       </p>
     </div>
   );

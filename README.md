@@ -10,8 +10,10 @@ A aplicação compila e a integração com a API Spring Boot foi verificada
 localmente, incluindo listagem, detalhe, envio e aprovação de evidência,
 ranking, atualização e exclusão de perfil. Revisões independentes conferiram
 o código, os testes e as capturas nas diferentes resoluções.
-O cumprimento completo da entrega ainda depende da publicação do frontend e
-do backend e dos links, fotos e perfis individuais não fornecidos.
+O grupo informou as URLs públicas do frontend e do backend. A entrega ainda
+depende da confirmação da integração pública, da URL do vídeo no YouTube e
+dos links individuais de GitHub e LinkedIn. As cinco fotos foram recuperadas
+do frontend da Sprint 3 fornecido pela equipe.
 
 ## Tecnologias utilizadas
 
@@ -28,15 +30,18 @@ Axios ou templates prontos.
 
 ## Como usar
 
-| Recurso                      | Endereço / situação                                             |
-| ---------------------------- | --------------------------------------------------------------- |
-| GitHub do frontend           | https://github.com/proc0x41/chellengesprints-alpha4             |
-| GitHub da API Java           | https://github.com/proc0x41/challengesprints-java               |
-| Frontend na Vercel           | Pendente de publicação e verificação pública                    |
-| API Java publicada           | Pendente de publicação e verificação pública                    |
-| Vídeo da Sprint 4 no YouTube | Pendente de gravação/publicação, duração máxima de três minutos |
+| Recurso                      | Endereço / situação                                      |
+| ---------------------------- | -------------------------------------------------------- |
+| GitHub do frontend           | https://github.com/proc0x41/chellengesprints-alpha4      |
+| GitHub da API Java           | https://github.com/proc0x41/challengesprints-java        |
+| Frontend na Vercel           | https://chellengesprints-alpha4.vercel.app/              |
+| API Java publicada           | https://challengesprints-java.onrender.com/api           |
+| Vídeo da Sprint 4 no YouTube | Gravação local concluída; publicação no YouTube pendente |
 
 O pitch da Sprint 3 citado no PDF não substitui a demonstração funcional da Sprint 4.
+Na última verificação remota, saúde e missões da API responderam 200, mas
+a origem da Vercel recebeu 403. Confirmar `CORS_ORIGINS` no Render e repetir
+a verificação antes de considerar a integração pública concluída.
 
 ### Executar localmente
 
@@ -136,7 +141,7 @@ src/
   services/     fetch, autenticação e validação do contrato Java
   test/         configuração dos testes
   types/        modelos de apresentação tipados
-public/images/  imagem de referência do PDF
+public/images/  protótipo visual e fotos dos integrantes
 e2e/            testes em navegador
 scripts/        empacotamento da entrega
 docs/           contrato e fluxo de versionamento
@@ -147,15 +152,17 @@ docs/           contrato e fluxo de versionamento
 Todos os integrantes são da turma **1TDSPW**. Nomes e RMs seguem o documento
 `Alpha4_Sprint3.pdf`, fornecido pela equipe.
 
-| Nome completo                   | RM     | Contato              | Foto          | GitHub        | LinkedIn      |
-| ------------------------------- | ------ | -------------------- | ------------- | ------------- | ------------- |
-| Vinicius de Oliveira            | 561862 | rm561862@fiap.com.br | Não fornecida | Não informado | Não informado |
-| Robison Custodio Junior         | 572866 | rm572866@fiap.com.br | Não fornecida | Não informado | Não informado |
-| Lucas Fernando Silva            | 564848 | rm564848@fiap.com.br | Não fornecida | Não informado | Não informado |
-| Thiago Shimizu Sodré dos Santos | 572867 | rm572867@fiap.com.br | Não fornecida | Não informado | Não informado |
-| Arthur Mendes Garcia            | 571703 | rm571703@fiap.com.br | Não fornecida | Não informado | Não informado |
+| Nome completo                   | RM     | Contato              | Foto                                                                                        | GitHub        | LinkedIn      |
+| ------------------------------- | ------ | -------------------- | ------------------------------------------------------------------------------------------- | ------------- | ------------- |
+| Vinicius de Oliveira            | 561862 | rm561862@fiap.com.br | <img src="public/images/team/vinicius.jpg" width="80" alt="Vinicius de Oliveira">           | Não informado | Não informado |
+| Robison Custodio Junior         | 572866 | rm572866@fiap.com.br | <img src="public/images/team/junior.jpeg" width="80" alt="Robison Custodio Junior">         | Não informado | Não informado |
+| Lucas Fernando Silva            | 564848 | rm564848@fiap.com.br | <img src="public/images/team/lucas.jpeg" width="80" alt="Lucas Fernando Silva">             | Não informado | Não informado |
+| Thiago Shimizu Sodré dos Santos | 572867 | rm572867@fiap.com.br | <img src="public/images/team/thiago.jpeg" width="80" alt="Thiago Shimizu Sodré dos Santos"> | Não informado | Não informado |
+| Arthur Mendes Garcia            | 571703 | rm571703@fiap.com.br | <img src="public/images/team/arthur.jpeg" width="80" alt="Arthur Mendes Garcia">            | Não informado | Não informado |
 
-Esses campos precisam ser preenchidos com os dados reais antes da entrega.
+Os links individuais ainda precisam ser fornecidos antes da entrega. O projeto
+da Sprint 3 contém as fotos, mas não os perfis individuais; o link de um
+repositório não foi usado como substituto dos cinco perfis.
 O histórico utiliza Conventional Commits em português, com rodízio de
 identidades locais solicitado pela equipe. Veja [GitFlow](docs/GITFLOW.md).
 
@@ -179,6 +186,10 @@ O arquivo original `public/images/missoes-sprint3.png` foi extraído da página
 separar os títulos das pontuações e corrigir a sobreposição do original.
 O prompt da edição acompanha a imagem no arquivo `.prompt.txt`.
 Os valores do protótipo são ilustrativos, não dados de uma conta real.
+As fotos em `public/images/team/` foram copiadas sem alteração de
+`sprint3-front/challeger-alpha4/public/img/`. A associação entre foto e nome
+segue `src/routes/Integrantes/index.tsx` desse projeto, inclusive a foto
+`junior.jpeg`, identificada ali como Junior Custodio, para Robison Custodio Junior.
 A interface utiliza
 controles textuais e nativos do navegador, sem pacote de UI ou ícones externos.
 
